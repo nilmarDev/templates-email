@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+      xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StoreTemplate</title>
+  <style type="text/css">
+
+    @media only screen and (max-width: 700px) {
+      /* ----- Base styles ----- */
+      .full-width-container {
+        padding: 0 !important;
+      }
+
+      .container {
+        width: 100% !important;
+      }
+
+      /* ----- Header ----- */
+      .header td {
+        padding: 30px 15px 30px 15px !important;
+      }
+
+      /* ----- Projects list ----- */
+      .promotions {
+        display: block !important;
+      }
+
+      .projects-list tr {
+        display: block !important;
+      }
+
+      .projects-list td {
+        display: block !important;
+      }
+
+      .projects-list tbody {
+        display: block !important;
+      }
+
+      .projects-list img {
+        margin: 0 auto 25px auto;
+      }
+
+      /* ----- Half block ----- */
+      .half-block tr {
+        display: block !important;
+      }
+
+      .half-block td {
+        display: block !important;
+      }
+
+      /* ----- Hero subheader ----- */
+      .hero-subheader__title {
+        padding: 20px 15px 15px 15px !important;
+        font-size: 22px !important;
+      }
+
+      .hero-subheader__content {
+        padding: 0 70px 40px 70px !important;
+        font-size: 20px !important;
+      }
+
+      /* ----- Title block ----- */
+      .title-block {
+        padding: 0 15px 0 15px;
+      }
+
+      /* ----- Info bullets ----- */
+      .info-bullets tr {
+        display: block !important;
+      }
+
+      .info-bullets td {
+        display: block !important;
+      }
+
+      .info-bullets tbody {
+        display: block;
+      }
+
+      .cta-block__button {
+        padding: 0 15px 0 15px !important;
+      }
+
+      /* ---Table Product--- */
+      .table_product {
+        padding: 0 40px 0 40px !important;
+      }
+    }
+
+    /* ---HERE CUSTOM CODE CSS--- */
+
+  </style>
+
+
+  <!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+  </xml><![endif]-->
+</head>
+
+<body style="padding: 0; margin: 0;">
+
+<!-- / Full width container -->
+<table class="full-width-container" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" bgcolor=""
+       style="width: 100%; height: 100%; padding: 30px 0 10px 0;">
+  <tr>
+    <td align="center" valign="top">
+      <!-- / 700px container -->
+      <table class="container" border="0" cellpadding="0" cellspacing="0" width="700" style="width: 700px;">
+        <tr>
+          <td align="center" valign="top">
+            <!-- / Header -->
+            <div style="background-color: {{$template_data['background_color']}}; padding-bottom: 7%">
+              <table class="container header" border="0" cellpadding="0" cellspacing="0" width="320"
+                     style="width: 620px;">
+                <tr>
+                  <td style="padding: 30px 0 30px 0;" align="center">
+                    <a href="{{$template_data['logo_link']}}" target="_blank"><img class="header__logo" alt="Logo image"
+                                                                                   src="{{$template_data['logo_src']}}"></a>
+                  </td>
+                </tr>
+              </table>
+              @yield('content')
+            </div>
+            <!-- LINKS FOOTER -->
+
+            <table class="footer">
+              <tr>
+                <td valign="top" align="center">
+                  <table class="footer__links">
+                    <tr>
+                      <td>
+                        @foreach($template_data['menu_links'] as $menu_link)
+                        <table class="container line" border="0" cellpadding="0" cellspacing="0" align="center">
+                          <tr>
+                            <td align="center">
+                              <table class="container footer__links__line" border="0" cellpadding="0" cellspacing="0" width="100%"
+                                     align="center">
+                                <tr>
+                                  <td align="center">&nbsp;</td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                        <table class="container table_product" border="0" cellpadding="0" cellspacing="0" align="center">
+                          <tr>
+                            <td class="footer__links__title">
+                              <a href="{{$menu_link['link']}}" target="_blank"
+                                 style="text-decoration: none;">{{strtoupper($menu_link['title'])}}</a>
+                            </td>
+                          </tr>
+                        </table>
+                        @endforeach
+                        <table class="container line" border="0" cellpadding="0" cellspacing="0" align="center">
+                          <tr>
+                            <td align="center">
+                              <table class="container footer__links__line line" border="0" cellpadding="0" cellspacing="0" width="100%"
+                                     align="center">
+                                <tr>
+                                  <td align="center">&nbsp;</td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <table class="container footer__banner" border="0" cellpadding="0" cellspacing="0" width="100%" align="center">
+                    <tr>
+                      <td align="center">
+                        <table class="container" border="0" cellpadding="0" cellspacing="0" width="620" align="center"
+                               style="width: 620px;">
+                          <tr>
+                            <td align="middle">
+                              <table width="60" height="2" border="0" cellpadding="0" cellspacing="0"
+                                     style="width: 60px; height: 2px;">
+                                <tr>
+                                  <td align="middle" width="60" height="2">
+                                    <a href="{{$template_data['banner_link']}}" target="_blank"><img
+                                      alt="Banner promotional"
+                                      src="{{$template_data['banner_src']}}"
+                                      width="700" height="255"></a>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <table class="container footer__icons" border="0" cellpadding="0" cellspacing="0" width="100%" align="center">
+                    <tr>
+                      <td align="center">
+                        <table class="container" border="0" cellpadding="0" cellspacing="0" width="620" align="center"
+                               style="width: 620px;">
+                          @if ($template_data['show_social_links'])
+                          <tr>
+                            <td align="middle">
+                              <!-- ICONS SOCIAL -->
+                              <table width="60" height="2" border="0" cellpadding="0" cellspacing="0"
+                                     style="width: 60px; height: 2px;">
+                                <tr>
+                                  @if ($template_data['instagram_link'])
+                                  <td align="middle" width="60" height="2"
+                                      style="padding: 50px 15px 10px; width: 60px; height: 2px; font-size: 1px;">
+                                    <a href="{{$template_data['instagram_link']}}" target="_blank"><img alt="Instagram"
+                                                                                                        src="https://relay-cloud-production.s3.amazonaws.com/static/instagram_icon.png"
+                                                                                                        width="30"></a>
+                                  </td>
+                                  @endif
+                                  @if ($template_data['facebook_link'])
+                                  <td align="middle" width="60" height="2"
+                                      style="padding: 50px 15px 10px; width: 60px; height: 2px; font-size: 1px;">
+                                    <a href="{{$template_data['facebook_link']}}" target="_blank"><img alt="Facebook"
+                                                                                                       src="https://relay-cloud-production.s3.amazonaws.com/static/facebook_icon.png"
+                                                                                                       width="30"></a>
+                                  </td>
+                                  @endif
+                                  @if ($template_data['pinterest_link'])
+                                  <td align="middle" width="60" height="2"
+                                      style="padding: 50px 15px 10px; width: 60px; height: 2px; font-size: 1px;">
+                                    <a href="{{$template_data['pinterest_link']}}" target="_blank"><img alt="Pinterest"
+                                                                                                        src="https://relay-cloud-production.s3.amazonaws.com/static/pinterest_icon.png"
+                                                                                                        width="30"></a>
+                                  </td>
+                                  @endif
+                                  @if ($template_data['twitter_link'])
+                                  <td align="middle" width="60" height="2"
+                                      style="padding: 50px 15px 10px; width: 60px; height: 2px; font-size: 1px;">
+                                    <a href="{{$template_data['twitter_link']}}" target="_blank"><img alt="Twitter"
+                                                                                                      src="https://relay-cloud-production.s3.amazonaws.com/static/twitter_icon.png"
+                                                                                                      width="30"></a>
+                                  </td>
+                                  @endif
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          @endif
+                          <tr>
+                            <td
+                              style="color: #333333; text-align: center; font-size: 12px; padding: 40px 0 20px 0; line-height: 22px;">
+                              @ {{strtoupper($template_data['store_name'])}} 2020, All rights reserved.
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              style="color: #333333; text-align: center; font-size: 12px; padding: 5px 0 0  0; line-height: 22px;">
+                              {{$template_data['street']}} | {{$template_data['city']}} ,
+                              {{$template_data['state_code']}}
+                              {{$template_data['postal_code']}} - {{$template_data['country_code']}}
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              style="color: #333333; text-align: center; font-size: 12px; padding: 5px 0 0 0; line-height: 22px;">
+                              {{$template_data['store_email']}} | {{$template_data['logo_link']}}
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
