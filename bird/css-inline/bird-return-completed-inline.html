@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StoreTemplate</title>
+  <style type="text/css">
+
+    @import url(https://db.onlinewebfonts.com/c/0a086e32e41c5e5960b26626757f07f3?family=Apercu);
+
+    table {
+      font-family: 'Apercu', sans-serif;
+    }
+
+    @media only screen and (max-width: 700px) {
+      /* ----- Base styles ----- */
+      .full-width-container {
+        padding: 0 !important;
+      }
+
+      .container {
+        width: 100% !important;
+      }
+
+      /* ----- Header ----- */
+      .header td {
+        padding: 30px 15px 30px 15px !important;
+      }
+
+      /* ----- Projects list ----- */
+      .promotions {
+        display: block !important;
+      }
+
+      .projects-list tr {
+        display: block !important;
+      }
+
+      .projects-list td {
+        display: block !important;
+      }
+
+      .projects-list tbody {
+        display: block !important;
+      }
+
+      .projects-list img {
+        margin: 0 auto 25px auto;
+      }
+
+      /* ----- Half block ----- */
+      .half-block tr {
+        display: block !important;
+      }
+
+      .half-block td {
+        display: block !important;
+      }
+
+      /* ----- Hero subheader ----- */
+      .title {
+        padding: 20px 15px 15px 15px !important;
+        font-size: 22px !important;
+      }
+
+      .message {
+        padding: 0 70px 40px 70px !important;
+        font-size: 20px !important;
+      }
+
+      /* ----- Title block ----- */
+      .title-block {
+        padding: 0 15px 0 15px;
+      }
+
+      /* ----- Info bullets ----- */
+      .info-bullets tr {
+        display: block !important;
+      }
+
+      .info-bullets td {
+        display: block !important;
+      }
+
+      .info-bullets tbody {
+        display: block;
+      }
+    }
+  </style>
+
+
+  <!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+  </xml><![endif]-->
+</head>
+
+<body style="padding: 0; margin: 0;">
+
+<!-- / Full width container -->
+<table class="full-width-container" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" bgcolor="" style="width: 100%; height: 100%; padding: 30px 0 10px 0;">
+  <tr>
+    <td valign="top" align="center">
+
+      <table class="container" style="width:700px" width="700" cellspacing="0" cellpadding="0" border="0">
+        <tbody>
+        <tr>
+          <td valign="top" align="center">
+
+            <div style="background-color:{{ template_data.background_color }};padding-bottom:7%">
+              <table class="header" width="320" cellspacing="0" cellpadding="0" border="0" style="width: 620px;">
+                <tbody>
+                <tr>
+                  <td style="padding:30px 0 30px 0" align="center">
+                    <a href="{{ template_data.logo_link  }}" target="_blank">
+                      <img class="header__logo" alt="Logo image" src="{{ template_data.logo_src  }}" style="width: auto;height: 70px;">
+                    </a>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+
+              <!--content-->
+              <table class="container hero-subheader" border="0" cellpadding="0" cellspacing="0" width="620" style="width: 620px;">
+                <tr>
+                  <td class="title" align="center" style="text-align: center;font-size: 20px;color: #000000;font-weight: 500;padding: 25px 0 15px 0;">{{ data.title }}</td>
+                </tr>
+
+                <tr>
+                  <td class="message" align="center" style="font-size: 20px;line-height: 30px;color: #000000;padding: 10px 70px 20px;">
+                    {{{ data.body_message }}}
+                  </td>
+                </tr>
+              </table>
+              {{#if data.refund_info}}
+              <table class="container hero-subheader" border="0" cellpadding="0" cellspacing="0" width="620" style="width: 620px;">
+                <tr>
+                  <td class="hero-subheader__content" style="font-size: 15px; line-height: 30px; color: #333333; padding: 10px 70px 20px;">
+                    <b>Refund info: </b>
+                    {{{ data.refund_info }}}
+                  </td>
+                </tr>
+              </table>
+              {{/if}}
+              {{#if data.return_method === 30}}
+              <table align="center">
+                {{#if data.credit_info.credit_amount_created}}
+                <tr>
+                  <td class="" style="font-size: 10px; color: #333333; font-weight: bold">CREDIT CREATED:&nbsp;</td>
+                  <td class="" style="font-size: 12px; color: #333333; font-weight: normal">${{ data.credit_info.credit_amount_created }}</td>
+                </tr>
+                {{/if}}
+                {{#if data.credit_info.credit_expiration_date}}
+                <tr>
+                  <td class="" style="font-size: 10px; color: #333333; font-weight: bold">EXPIRATION DATE:&nbsp;</td>
+                  <td class="" style="font-size: 12px; color: #333333; font-weight: normal">{{ data.credit_info.credit_expiration_date }}</td>
+                </tr>
+                {{/if}}
+                {{#if data.credit_info.credit_redemption_code}}
+                <tr>
+                  <td class="" style="font-size: 10px; color: #333333; font-weight: bold">REDEMPTION CODE:&nbsp;</td>
+                  <td class="" style="font-size: 12px; color: #333333; font-weight: normal"> {{ data.credit_info.credit_redemption_code }}</td>
+                </tr>
+                {{/if}}
+              </table>
+              {{/if}}
+
+            </div>
+            <table class="footer">
+              <tr>
+                <td valign="top" align="center">
+                  <table>
+                    <tr>
+                      <td>
+                        <table class="footer__inner" style="padding: 32px;width: 700px;height: 267px;background: #000000;">
+                          <tr>
+                            <td class="footer__links" style="width: 630px;border-bottom: 1px solid #ffffff;padding-bottom: 30px;">
+                              <table class="container table_product" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tbody>
+                                <tr>
+                                  <td width="200">
+                                    <a href="{{ template_data.logo_link }}" target="_blank">
+                                      <img class="footer__logo" alt="Logo image" src="https://relay-cloud-production.s3.amazonaws.com/static/bird_black.png" style="width: auto;height: 65px;">
+                                    </a>
+                                  </td>
+                                  {{#each template_data.menu_links}}
+                                  <td class="footer__links__title" style="padding-top: 30px;font-size: 16px;color: #333333;font-weight: bold;">
+                                    <a href="{{ link }}" style="text-decoration: none;color: #ffffff;" target="_blank">{{ title }}</a>
+                                  </td>
+                                  {{/each}}
+                                </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <table class="container" style="width:620px;margin-top: 20px" width="620" cellspacing="0" cellpadding="0" border="0" align="center">
+                                <tbody>
+                                <tr>
+                                  <td style="color:#ffffff;font-size:18px;line-height:16px">
+                                    {{ template_data.store_name }}
+                                  </td>
+                                  <td style="color:#ffffff;font-size:18px;line-height:16px">
+                                    {{ template_data.street  }}
+                                  </td>
+                                  <td style="color:#ffffff;font-size:18px;line-height:16px">
+                                    {{ template_data.city }}, {{ template_data.state_code }} {{ template_data.postal_code }}
+                                  </td>
+                                  <td style="color:#ffffff;font-size:18px;line-height:16px">
+                                    (718) 388-3737
+                                  </td>
+                                </tr>
+                                </tbody>
+                              </table>
+                              <table align="center">
+                                <tr>
+                                  <td style="color:#ffffff;font-size:14px;line-height:24px;padding-top:25px;width:70%">
+                                    We send special offers to customers who opted in at checkout.
+                                    Copyright 2020 {{ template_data.store_name }}, All rights reserved.
+                                  </td>
+
+                                  <td align="center">
+
+                                    <table style="width:60px;height:2px" width="60" height="2" cellspacing="0" cellpadding="0" border="0">
+                                      <tbody>
+                                      {{#if template_data.show_social_links}}
+                                      <tr>
+                                        {{#if template_data.instagram_link}}
+                                        <td style="padding:25px 15px 10px;width:60px;height:2px;font-size:1px" width="60" height="2" align="center">
+                                          <a href="{{ template_data.instagram_link }}" target="_blank"><img alt="Instagram" src="https://relay-cloud-production.s3.amazonaws.com/static/instagram-white.png" class="CToWUd"></a>
+                                        </td>
+                                        {{/if}}
+                                        {{#if template_data.pinterest_link }}
+                                        <td style="padding:25px 15px 10px;width:60px;height:2px;font-size:1px" width="60" height="2" align="center">
+                                          <a href="{{ template_data.pinterest_link }}" target="_blank"><img alt="Pinterest" src="https://relay-cloud-production.s3.amazonaws.com/static/pinterest-white.png" class="CToWUd"></a>
+                                        </td>
+                                        {{/if}}
+                                        {{#if template_data.facebook_link}}
+                                        <td style="padding:25px 15px 10px;width:60px;height:2px;font-size:1px" width="60" height="2" align="center">
+                                          <a href="{{ template_data.facebook_link }}" target="_blank"><img alt="Facebook" src="https://relay-cloud-production.s3.amazonaws.com/static/facebook-white.png" class="CToWUd"></a>
+                                        </td>
+                                        {{/if}}
+                                        {{#if template_data.twitter_link }}
+                                        <td style="padding:25px 15px 10px;width:60px;height:2px;font-size:1px" width="60" height="2" align="center">
+                                          <a href="{{ template_data.twitter_link }}" target="_blank"><img alt="Twitter" src="https://relay-cloud-production.s3.amazonaws.com/static/twitter-white.png" class="CToWUd"></a>
+                                        </td>
+                                        {{/if}}
+                                      </tr>
+                                      {{/if}}
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
