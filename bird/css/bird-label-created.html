@@ -8,13 +8,87 @@
   <title>StoreTemplate</title>
   <style type="text/css">
 
-    @import url(https://www.catbirdnyc.com/static/frontend/ImaginationMedia/catbird/en_US/fonts/trade-gothic/trade-gothic-regular.woff2);
+    @import url(https://db.onlinewebfonts.com/c/0a086e32e41c5e5960b26626757f07f3?family=Apercu);
 
     table {
-      font-family: 'Trade Gothic', sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-font-smoothing: antialiased;
-      font-smoothing: antialiased;
+      font-family: 'Apercu', sans-serif;
+    }
+
+    .header {
+      width: 620px;
+    }
+
+    .header__logo {
+      width: auto;
+      height: 70px;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 20px;
+      color: #000000;
+      font-weight: 500;
+      padding: 25px 0 15px 0;
+    }
+
+    .message {
+      font-size: 20px;
+      line-height: 30px;
+      color: #000000;
+      padding: 10px 70px 20px;
+    }
+
+    .cta__block {
+      width: 100%;
+    }
+
+    .cta__button__link {
+      width: 230px;
+      background: #000000;
+      padding: 15px;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .cta__button__link a {
+      text-decoration: none;
+      color: #ffffff;
+    }
+    .footer {
+    }
+    .footer__inner {
+      padding: 32px;
+      width: 700px;
+      height: 267px;
+      background: #000000;
+    }
+    .footer__logo {
+      width: auto;
+      height: 65px;
+    }
+    .footer__links {
+      width: 630px;
+      border-bottom: 1px solid #ffffff;
+      padding-bottom: 30px;
+    }
+    .footer__links__title {
+      padding-top: 30px;
+      font-size: 16px;
+      color: #333333;
+      font-weight: bold;
+    }
+    .footer__links__title a {
+      color: #ffffff;
+    }
+
+    .footer__banner {
+      display: none;
+      margin-top: 16px;
+    }
+
+    .footer__icons {
     }
 
     @media only screen and (max-width: 700px) {
@@ -101,87 +175,6 @@
       }
     }
 
-    .header {
-      width: 620px;
-    }
-
-    .header__logo {
-      width: 235px;
-      height: auto;
-    }
-
-    .title {
-      text-align: center;
-      font-size: 20px;
-      color: #333333;
-      font-weight: 500;
-      padding: 25px 0 15px 0;
-    }
-
-    .message {
-      font-size: 20px;
-      line-height: 30px;
-      color: #333333;
-      padding: 10px 70px 20px;
-    }
-
-    .cta__block {
-    }
-
-    .cta__button__link {
-      width: 230px;
-      border-radius: 5px;
-      background: #333333;
-      padding: 15px;
-      text-transform: uppercase;
-      text-align: center;
-      font-size: 14px;
-      font-weight: bold;
-    }
-
-    .cta__button__link a {
-      text-decoration: none;
-      color: #ffffff;
-    }
-
-    .instructions__title {
-      font-size: 14px;
-      line-height: 30px;
-      color: #333333;
-      padding: 35px 34px 20px;
-    }
-
-    .footer {
-    }
-
-    .footer__links {
-      width: 100%;
-    }
-
-    .footer__links__line {
-      width: 700px;
-      border-bottom: solid 3px #333333;
-    }
-
-    .footer__links__title {
-      text-align: center;
-      font-size: 25px;
-      color: #333333;
-      font-weight: bold;
-      padding: 20px 0 0 0;
-    }
-    .footer__links__title a {
-      text-transform: uppercase;
-      color: #333333;
-    }
-
-    .footer__banner {
-      display: none;
-      margin-top: 50px;
-    }
-
-    .footer__icons {
-    }
   </style>
 
 
@@ -334,7 +327,7 @@
                       <li dir="ltr">
                         <p dir="ltr">
                           <span><strong>DROP OFF</strong>: You can also drop returns off in our Williamsburg or Soho locations. Please keep in mind there may be extra processing time as returns are processed at Catbird HQ. See store hours
-                            <a href="https://www.catbirdnyc.com/our-locations" target="_blank">
+                            <a href="" target="_blank">
                               here
                             </a>.&nbsp;
                           </span>
@@ -345,7 +338,8 @@
                     <p dir="ltr">
                       <span style="color:#000000">
                         All returned merchandise must be in its original condition. Sale items, special orders,
-                        custom jewelry, engraved items, fragrances, beauty products, and comestibles are final sale and cannot be returned.
+                        custom jewelry, engraved items, fragances, beauty products, and comestibles are final
+                        sale and cannot be returned.
                       </span>
                     </p>
                   </td>
@@ -353,20 +347,6 @@
                 </tbody>
               </table>
               <!--END RETURN INSTRUCTIONS-->
-              {{#if data.return_data.contact_page}}
-              <table class="container table_product" border="0" cellpadding="0" cellspacing="0" width="620" style="width: 620px; padding: 0 0 50px 0;" align="center">
-                <tr>
-                  <td class="" style="font-size: 20px; color: #333333; font-weight: bold; padding: 25px 0 10px 0;" align="center">Questions?</td>
-                </tr>
-                <tr>
-                  <td class="" style="font-size: 20px; color: #333333; font-weight: bold;" align="center">
-                    <a href="{{ data.return_data.contact_page }}" target="_blank" style="color: inherit; text-decoration: none">
-                      {{ data.return_data.contact_page }}
-                    </a>
-                  </td>
-                </tr>
-              </table>
-              {{/if}}
 
             </div>
             <table class="footer">
@@ -374,183 +354,123 @@
                 <td valign="top" align="center">
                   <table>
                     <tr>
-                      <td class="footer__links">
-                        {{#each template_data.menu_links}}
-                          <table class="container line" cellspacing="0" cellpadding="0"
-                                 border="0"
-                                 align="center">
-                            <tbody>
-                            <tr>
-                              <td align="center">
-                                <table class="footer__links__line"
-                                       width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
-                                  <tbody>
-                                  <tr>
-                                    <td align="center">&nbsp;</td>
-                                  </tr>
-                                  </tbody>
-                                </table>
-                              </td>
-                            </tr>
-                            </tbody>
-                          </table>
-                          <table class="container table_product"
-                                 cellspacing="0" cellpadding="0" border="0" align="center">
-                            <tbody>
-                            <tr>
-                              <td class="footer__links__title">
-                                <a href="{{ link }}" style="text-decoration:none"
-                                   target="_blank">{{ title }}</a>
-                              </td>
-                            </tr>
-                            </tbody>
-                          </table>
-                        {{/each}}
-                        <table class="container line" cellspacing="0" cellpadding="0"
-                               border="0"
-                               align="center">
-                          <tbody>
+                      <td>
+                        <table class="footer__inner">
                           <tr>
-                            <td align="center">
-                              <table class="footer__links__line"
-                                     width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                            <td class="footer__links">
+                              <table class="container table_product"
+                                     cellspacing="0" cellpadding="0" border="0" width="100%">
                                 <tbody>
                                 <tr>
-                                  <td align="center">&nbsp;</td>
+                                  <td width="200">
+                                    <a href="{{ template_data.logo_link }}" target="_blank">
+                                      <img class="footer__logo" alt="Logo image"
+                                           src="https://relay-cloud-production.s3.amazonaws.com/static/bird_black.png">
+                                    </a>
+                                  </td>
+                                  {{#each template_data.menu_links}}
+                                    <td class="footer__links__title">
+                                      <a href="{{ link }}" style="text-decoration:none"
+                                         target="_blank">{{ title }}</a>
+                                    </td>
+                                  {{/each}}
                                 </tr>
                                 </tbody>
                               </table>
                             </td>
                           </tr>
-                          </tbody>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-
-                  <table class="container footer__banner" width="100%" cellspacing="0"
-                         cellpadding="0" border="0"
-                         align="center">
-                    <tbody>
-                    <tr>
-                      <td align="center">
-                        <table class="container" style="width:620px" width="620" cellspacing="0"
-                               cellpadding="0" border="0" align="center">
-                          <tbody>
                           <tr>
-                            <td align="center">
-                              <table style="width:60px;height:2px" width="60" height="2" cellspacing="0" cellpadding="0"
-                                     border="0">
+                            <td>
+                              <table class="container" style="width:620px;margin-top: 20px" width="620" cellspacing="0"
+                                     cellpadding="0" border="0" align="center">
                                 <tbody>
                                 <tr>
                                   <td
-                                      align="center">
-                                    <a href="{{ template_data.banner_link }}" target="_blank"><img
-                                      alt="Banner promotional"
-                                      src="{{ template_data.banner_src }}"
-                                      class="CToWUd" width="700" height="255"></a>
+                                    style="color:#ffffff;font-size:18px;line-height:16px">
+                                    {{ template_data.store_name }}
+                                  </td>
+                                  <td
+                                    style="color:#ffffff;font-size:18px;line-height:16px">
+                                    {{ template_data.street  }}
+                                  </td>
+                                  <td
+                                    style="color:#ffffff;font-size:18px;line-height:16px">
+                                    {{ template_data.city }}, {{ template_data.state_code }} {{ template_data.postal_code }}
+                                  </td>
+                                  <td
+                                    style="color:#ffffff;font-size:18px;line-height:16px">
+                                    (718) 388-3737
                                   </td>
                                 </tr>
                                 </tbody>
                               </table>
-                            </td>
-                          </tr>
-                          </tbody>
-                        </table>
-                      </td>
-                    </tr>
-                    </tbody>
-                  </table>
-
-                  <table class="container footer__icons" width="100%" cellspacing="0"
-                         cellpadding="0" border="0"
-                         align="center">
-                    <tbody>
-                    <tr>
-                      <td align="center">
-                        <table class="container" style="width:620px" width="620" cellspacing="0"
-                               cellpadding="0" border="0" align="center">
-                          <tbody>
-                          {{#if template_data.show_social_links}}
-                            <tr>
-                            <td align="center">
-
-                              <table style="width:60px;height:2px" width="60" height="2" cellspacing="0" cellpadding="0"
-                                     border="0">
-                                <tbody>
+                              <table align="center">
                                 <tr>
-                                  {{#if template_data.instagram_link}}
-                                  <td style="padding:50px 15px 10px;width:60px;height:2px;font-size:1px" width="60"
-                                      height="2"
-                                      align="center">
-                                    <a href="{{ template_data.instagram_link }}" target="_blank"><img
-                                      alt="Instagram"
-                                      src="https://relay-cloud-production.s3.amazonaws.com/static/instagram_icon.png"
-                                      class="CToWUd" width="30"></a>
+                                  <td
+                                    style="color:#ffffff;font-size:14px;line-height:24px;padding-top:25px;width:70%">
+                                    We send special offers to customers who opted in at checkout.
+                                    Copyright 2020 {{ template_data.store_name }}, All rights reserved.
                                   </td>
-                                  {{/if}}
-                                  {{#if template_data.facebook_link}}
-                                  <td style="padding:50px 15px 10px;width:60px;height:2px;font-size:1px" width="60"
-                                      height="2"
-                                      align="center">
-                                    <a href="{{ template_data.facebook_link }}" target="_blank"><img
-                                      alt="Facebook"
-                                      src="https://relay-cloud-production.s3.amazonaws.com/static/facebook_icon.png"
-                                      class="CToWUd" width="30"></a>
+
+                                  <td align="center">
+
+                                    <table style="width:60px;height:2px" width="60" height="2" cellspacing="0" cellpadding="0"
+                                           border="0">
+                                      <tbody>
+                                      {{#if template_data.show_social_links}}
+                                      <tr>
+                                        {{#if template_data.instagram_link}}
+                                        <td style="padding:25px 15px 10px;width:60px;height:2px;font-size:1px" width="60"
+                                            height="2"
+                                            align="center">
+                                          <a href="{{ template_data.instagram_link }}" target="_blank"><img
+                                            alt="Instagram"
+                                            src="https://relay-cloud-production.s3.amazonaws.com/static/instagram-white.png"
+                                            class="CToWUd"></a>
+                                        </td>
+                                        {{/if}}
+                                        {{#if template_data.pinterest_link }}
+                                        <td style="padding:25px 15px 10px;width:60px;height:2px;font-size:1px" width="60"
+                                            height="2"
+                                            align="center">
+                                          <a href="{{ template_data.pinterest_link }}" target="_blank"><img
+                                            alt="Pinterest"
+                                            src="https://relay-cloud-production.s3.amazonaws.com/static/pinterest-white.png"
+                                            class="CToWUd"></a>
+                                        </td>
+                                        {{/if}}
+                                        {{#if template_data.facebook_link}}
+                                        <td style="padding:25px 15px 10px;width:60px;height:2px;font-size:1px" width="60"
+                                            height="2"
+                                            align="center">
+                                          <a href="{{ template_data.facebook_link }}" target="_blank"><img
+                                            alt="Facebook"
+                                            src="https://relay-cloud-production.s3.amazonaws.com/static/facebook-white.png"
+                                            class="CToWUd"></a>
+                                        </td>
+                                        {{/if}}
+                                        {{#if template_data.twitter_link }}
+                                        <td style="padding:25px 15px 10px;width:60px;height:2px;font-size:1px" width="60"
+                                            height="2"
+                                            align="center">
+                                          <a href="{{ template_data.twitter_link }}" target="_blank"><img
+                                            alt="Twitter"
+                                            src="https://relay-cloud-production.s3.amazonaws.com/static/twitter-white.png"
+                                            class="CToWUd"></a>
+                                        </td>
+                                        {{/if}}
+                                      </tr>
+                                      {{/if}}
+                                      </tbody>
+                                    </table>
                                   </td>
-                                  {{/if}}
-                                  {{#if template_data.pinterest_link }}
-                                  <td style="padding:50px 15px 10px;width:60px;height:2px;font-size:1px" width="60"
-                                      height="2"
-                                      align="center">
-                                    <a href="{{ template_data.pinterest_link }}" target="_blank"><img
-                                      alt="Pinterest"
-                                      src="https://relay-cloud-production.s3.amazonaws.com/static/pinterest_icon.png"
-                                      class="CToWUd" width="30"></a>
-                                  </td>
-                                  {{/if}}
-                                  {{#if template_data.twitter_link }}
-                                  <td style="padding:50px 15px 10px;width:60px;height:2px;font-size:1px" width="60"
-                                      height="2"
-                                      align="center">
-                                    <a href="{{ template_data.twitter_link }}" target="_blank"><img
-                                      alt="Twitter"
-                                      src="https://relay-cloud-production.s3.amazonaws.com/static/twitter_icon.png"
-                                      class="CToWUd" width="30"></a>
-                                  </td>
-                                  {{/if}}
                                 </tr>
-                                </tbody>
                               </table>
                             </td>
                           </tr>
-                          {{/if}}
-                          <tr>
-                            <td
-                              style="color:#333333;text-align:center;font-size:12px;padding:40px 0 20px 0;line-height:22px">
-                              @ {{#upper template_data.store_name }} 2020, All rights reserved.
-                            </td>
-                          </tr>
-                          <tr>
-                            <td
-                              style="color:#333333;text-align:center;font-size:12px;padding:5px 0 0 0;line-height:22px">
-                              {{ template_data.street }} | {{ template_data.city }} ,
-                              {{ template_data.state_code }} {{ template_data.postal_code']}} - {{ template_data.country_code }}
-                            </td>
-                          </tr>
-                          <tr>
-                            <td
-                              style="color:#333333;text-align:center;font-size:12px;padding:5px 0 0 0;line-height:22px">
-                              <a
-                                href="mailto:{{ template_data.store_email }}" target="_blank">{{ template_data.store_email }}</a> | <a
-                              href="{{ template_data.logo_link }}" target="_blank">{{ template_data.logo_link }}</a>
-                            </td>
-                          </tr>
-                          </tbody>
                         </table>
                       </td>
                     </tr>
-                    </tbody>
                   </table>
                 </td>
               </tr>

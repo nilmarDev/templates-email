@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StoreTemplate</title>
+  <style type="text/css">
+
+    @import url(https://db.onlinewebfonts.com/c/0a086e32e41c5e5960b26626757f07f3?family=Apercu);
+
+    table {
+      font-family: 'Apercu', sans-serif;
+    }
+
+    @media only screen and (max-width: 700px) {
+      /* ----- Base styles ----- */
+      .full-width-container {
+        padding: 0 !important;
+      }
+
+      .container {
+        width: 100% !important;
+      }
+
+      /* ----- Header ----- */
+      .header td {
+        padding: 30px 15px 30px 15px !important;
+      }
+
+      .projects-list tr {
+        display: block !important;
+      }
+
+      .projects-list td {
+        display: block !important;
+      }
+
+      .projects-list tbody {
+        display: block !important;
+      }
+
+      .projects-list img {
+        margin: 0 auto 25px auto;
+      }
+
+      /* ----- Half block ----- */
+      .half-block tr {
+        display: block !important;
+      }
+
+      .half-block td {
+        display: block !important;
+      }
+
+      /* ----- Hero subheader ----- */
+      .title {
+        padding: 20px 15px 15px 15px !important;
+        font-size: 22px !important;
+      }
+
+      .message {
+        padding: 0 70px 40px 70px !important;
+        font-size: 20px !important;
+      }
+
+      /* ----- Info bullets ----- */
+      .info-bullets tr {
+        display: block !important;
+      }
+
+      .info-bullets td {
+        display: block !important;
+      }
+
+      .info-bullets tbody {
+        display: block;
+      }
+    }
+
+  </style>
+
+
+  <!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+  </xml><![endif]-->
+</head>
+
+<body style="padding: 0; margin: 0;">
+
+<!-- / Full width container -->
+<table class="full-width-container" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" bgcolor="" style="width: 100%; height: 100%; padding: 30px 0 10px 0;">
+  <tr>
+    <td valign="top" align="center">
+
+      <table class="container" style="width:700px" width="700" cellspacing="0" cellpadding="0" border="0">
+        <tbody>
+        <tr>
+          <td valign="top" align="center">
+
+            <div style="background-color:{{ template_data.background_color }};padding-bottom:7%">
+              <table class="header" width="320" cellspacing="0" cellpadding="0" border="0" style="width: 620px;">
+                <tbody>
+                <tr>
+                  <td style="padding:30px 0 30px 0" align="center">
+                    <a href="{{ template_data.logo_link  }}" target="_blank">
+                      <img class="header__logo" alt="Logo image" src="{{ template_data.logo_src  }}" style="width: auto;height: 70px;">
+                    </a>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+
+              <!--content-->
+              <table class="container hero-subheader" border="0" cellpadding="0" cellspacing="0" width="620" style="width: 620px;">
+                <tr>
+                  <td class="title" align="center" style="text-align: center;font-size: 20px;color: #000000;font-weight: 500;padding: 25px 0 15px 0;">{{ data.title }}</td>
+                </tr>
+
+                <tr>
+                  <td class="message" align="left" style="font-size: 20px;line-height: 30px;color: #000000;padding: 10px 70px 20px;">
+                    {{{ data.body_message }}}
+                  </td>
+                </tr>
+
+              </table>
+              <!-- Table Product -->
+              <table class="container table_product" border="0" cellpadding="0" cellspacing="0" width="620" style="width: 620px;">
+                <tr class="" border="0" cellpadding="0" cellspacing="0" width="620" style="border-bottom: solid 1px #333333; width: 620px;">
+                  <td class="" width="50%" style="font-size: 14px; color: #333333; font-weight: bold; padding: 25px 0 0 0;" align="">RETURN SUMMARY FOR RETURN ID {{ data.return_data.return_id }}</td>
+                  <td class="" width="20%" style="font-size: 14px; color: #333333; font-weight: bold; padding: 25px 10px 0 0;" align="">PRICE</td>
+                  <td class="" width="20%" style="font-size: 14px; color: #333333; font-weight: bold; padding: 25px 0 0 0;" align="">QTY</td>
+                  <td class="" width="10%" style="font-size: 14px; color: #333333; font-weight: bold; padding: 25px 0 0 0;" align="">SUBTOTAL</td>
+                </tr>
+              </table>
+              <!-- / Divider -->
+              <table class="" border="0" cellpadding="0" cellspacing="0" width="620" align="center" style="border-bottom: solid 1px #333333; width: 620px;">
+                <tr>
+                  <td align="center">&nbsp;</td>
+                </tr>
+              </table>
+              <!-- Products -->
+              {{#each data.return_data.items}}
+              <table class="container table_product" border="0" cellpadding="0" cellspacing="0" width="620" style="width: 620px;">
+                <tr>
+                  <td class="" width="50%" style="font-size: 10px; color: #333333; font-weight: bold; padding: 25px 0 0 0;" align="">{{ description}}</td>
+                  <td class="" width="20%" style="font-size: 12px; color: #333333; font-weight: normal; padding: 25px 0 0 0;" align="">{{ price_with_tax }}</td>
+                  <td class="" width="20%" style="font-size: 12px; color: #333333; font-weight: normal; padding: 25px 14px 0 0;" align="">{{ quantity }}</td>
+                  <td class="" width="20%" style="font-size: 12px; color: #333333; font-weight: normal; padding: 25px 10px 0 0;" align="">{{ subtotal }}</td>
+                </tr>
+                <tr>
+                  <td class="" style="font-size: 12px; color: #333333; font-weight: normal; padding: 10px 0 0 0;" align="">{{ item_identifier }}</td>
+                </tr>
+              </table>
+              {{/each}}
+              <table class="container table_product" border="0" cellpadding="0" cellspacing="0" width="620" style="width: 620px;">
+                <tr>
+                  <td class="" width="50%" style="font-size: 10px; color: #333333; font-weight: bold; padding: 25px 0 0 0;" align="">SHIPPING AND OTHER TAXES</td>
+                  <td class="" width="20%" style="font-size: 12px; color: #333333; font-weight: normal; padding: 25px 0 0 0;" align=""></td>
+                  <td class="" width="20%" style="font-size: 12px; color: #333333; font-weight: normal; padding: 25px 14px 0 0;" align=""></td>
+                  <td class="" width="20%" style="font-size: 12px; color: #333333; font-weight: normal; padding: 25px 10px 0 0;" align="">{{ data.return_data.order_fee_amount }}</td>
+                </tr>
+              </table>
+              <table class="" border="0" cellpadding="0" cellspacing="0" width="620" align="center" style="border-bottom: solid 1px #D9D9D9; width: 620px;">
+                <tr>
+                  <td align="center">&nbsp;</td>
+                </tr>
+              </table>
+
+              <table class="container table_product" border="0" cellpadding="0" cellspacing="0" width="655" style="width: 655px;" align="">
+                <tr>
+                  <td style="width: 55%;" align="">&nbsp;</td>
+                  <td class="" style="font-size: 14px; color: #333333; font-weight: bold; padding: 25px 0 0 0;" align="right">RETURN FEE</td>
+                  <td class="" style="font-size: 14px; color: #333333; font-weight: normal; padding: 25px 36px 0 0;" align="right">{{ data.return_data.return_fee }}</td>
+                </tr>
+                <tr>
+                  <td style="width: 55%;" align="">&nbsp;</td>
+                  <td class="" style="font-size: 14px; color: #333333; font-weight: bold; padding: 25px 0 0 0;" align="right">ESTIMATED REFUND</td>
+                  <td class="" style="font-size: 14px; color: #333333; font-weight: normal; padding: 25px 36px 0 0;" align="right">{{ data.return_data.estimated_refund }}</td>
+                </tr>
+              </table>
+
+              <table style="padding: 40px 0 0 0;">
+                <tr>
+                  <td align="center">
+                    <table class="cta__block" border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+                      <tr>
+                        <td class="cta__button__link" style="width: 230px;background: #000000;padding: 15px;text-transform: uppercase;text-align: center;font-size: 14px;font-weight: bold;">
+                          <a href="{{ data.button_link}}" style="text-decoration: none;color: #ffffff;">
+                            {{ data.button_text }}
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <!--RETURN INSTRUCTIONS-->
+              <table class="container " border="0" cellpadding="0" cellspacing="0" width="690" style="width: 690px;">
+                <tr>
+                  <td class="" style="font-size: 14px; line-height: 30px; color: #333333; padding: 35px 34px 20px;" align="left">
+                    RETURN INSTRUCTIONS:
+                  </td>
+                </tr>
+              </table>
+              <table class="container" width="690" cellspacing="0" cellpadding="0" border="0" align="">
+                <tbody>
+                <tr>
+                  <td style="font-size:20px;line-height:30px;color:#333333;padding:0 34px 15px" align="">
+                    <ol>
+                      <li dir="ltr">
+                        <p dir="ltr"><span><strong>PRINT</strong>: Please print out the attached UPS label and the Return Authorization Slip.</span>
+                        </p>
+                      </li>
+                      <li dir="ltr">
+                        <p dir="ltr"><span><strong>PACK:</strong> Please use all original packaging if you have it. Make sure to include the Return Authorization Slip.</span>
+                        </p>
+                      </li>
+                      <li dir="ltr">
+                        <p dir="ltr"><span><strong>SHIP</strong>: Bring it to a local UPS location (link to UPS website) or you can call to schedule a pick up at 1-800-PICKUPS.&nbsp;</span>
+                        </p>
+                      </li>
+                      <li dir="ltr">
+                        <p dir="ltr">
+                          <span><strong>DROP OFF</strong>: You can also drop returns off in our Williamsburg or Soho locations. Please keep in mind there may be extra processing time as returns are processed at Catbird HQ. See store hours
+                            <a href="" target="_blank">
+                              here
+                            </a>.&nbsp;
+                          </span>
+                        </p>
+                      </li>
+                    </ol>
+                    <p><span style="color:#000000">&nbsp;</span></p>
+                    <p dir="ltr">
+                      <span style="color:#000000">
+                        All returned merchandise must be in its original condition. Sale items, special orders,
+                        custom jewelry, engraved items, fragances, beauty products, and comestibles are final
+                        sale and cannot be returned.
+                      </span>
+                    </p>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+              <!--END RETURN INSTRUCTIONS-->
+
+            </div>
+            <table class="footer">
+              <tr>
+                <td valign="top" align="center">
+                  <table>
+                    <tr>
+                      <td>
+                        <table class="footer__inner" style="padding: 32px;width: 700px;height: 267px;background: #000000;">
+                          <tr>
+                            <td class="footer__links" style="width: 630px;border-bottom: 1px solid #ffffff;padding-bottom: 30px;">
+                              <table class="container table_product" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tbody>
+                                <tr>
+                                  <td width="200">
+                                    <a href="{{ template_data.logo_link }}" target="_blank">
+                                      <img class="footer__logo" alt="Logo image" src="https://relay-cloud-production.s3.amazonaws.com/static/bird_black.png" style="width: auto;height: 65px;">
+                                    </a>
+                                  </td>
+                                  {{#each template_data.menu_links}}
+                                  <td class="footer__links__title" style="padding-top: 30px;font-size: 16px;color: #333333;font-weight: bold;">
+                                    <a href="{{ link }}" style="text-decoration: none;color: #ffffff;" target="_blank">{{ title }}</a>
+                                  </td>
+                                  {{/each}}
+                                </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <table class="container" style="width:620px;margin-top: 20px" width="620" cellspacing="0" cellpadding="0" border="0" align="center">
+                                <tbody>
+                                <tr>
+                                  <td style="color:#ffffff;font-size:18px;line-height:16px">
+                                    {{ template_data.store_name }}
+                                  </td>
+                                  <td style="color:#ffffff;font-size:18px;line-height:16px">
+                                    {{ template_data.street  }}
+                                  </td>
+                                  <td style="color:#ffffff;font-size:18px;line-height:16px">
+                                    {{ template_data.city }}, {{ template_data.state_code }} {{ template_data.postal_code }}
+                                  </td>
+                                  <td style="color:#ffffff;font-size:18px;line-height:16px">
+                                    (718) 388-3737
+                                  </td>
+                                </tr>
+                                </tbody>
+                              </table>
+                              <table align="center">
+                                <tr>
+                                  <td style="color:#ffffff;font-size:14px;line-height:24px;padding-top:25px;width:70%">
+                                    We send special offers to customers who opted in at checkout.
+                                    Copyright 2020 {{ template_data.store_name }}, All rights reserved.
+                                  </td>
+
+                                  <td align="center">
+
+                                    <table style="width:60px;height:2px" width="60" height="2" cellspacing="0" cellpadding="0" border="0">
+                                      <tbody>
+                                      {{#if template_data.show_social_links}}
+                                      <tr>
+                                        {{#if template_data.instagram_link}}
+                                        <td style="padding:25px 15px 10px;width:60px;height:2px;font-size:1px" width="60" height="2" align="center">
+                                          <a href="{{ template_data.instagram_link }}" target="_blank"><img alt="Instagram" src="https://relay-cloud-production.s3.amazonaws.com/static/instagram-white.png" class="CToWUd"></a>
+                                        </td>
+                                        {{/if}}
+                                        {{#if template_data.pinterest_link }}
+                                        <td style="padding:25px 15px 10px;width:60px;height:2px;font-size:1px" width="60" height="2" align="center">
+                                          <a href="{{ template_data.pinterest_link }}" target="_blank"><img alt="Pinterest" src="https://relay-cloud-production.s3.amazonaws.com/static/pinterest-white.png" class="CToWUd"></a>
+                                        </td>
+                                        {{/if}}
+                                        {{#if template_data.facebook_link}}
+                                        <td style="padding:25px 15px 10px;width:60px;height:2px;font-size:1px" width="60" height="2" align="center">
+                                          <a href="{{ template_data.facebook_link }}" target="_blank"><img alt="Facebook" src="https://relay-cloud-production.s3.amazonaws.com/static/facebook-white.png" class="CToWUd"></a>
+                                        </td>
+                                        {{/if}}
+                                        {{#if template_data.twitter_link }}
+                                        <td style="padding:25px 15px 10px;width:60px;height:2px;font-size:1px" width="60" height="2" align="center">
+                                          <a href="{{ template_data.twitter_link }}" target="_blank"><img alt="Twitter" src="https://relay-cloud-production.s3.amazonaws.com/static/twitter-white.png" class="CToWUd"></a>
+                                        </td>
+                                        {{/if}}
+                                      </tr>
+                                      {{/if}}
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
