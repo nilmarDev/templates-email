@@ -71,6 +71,16 @@
       width: 497px;
     }
 
+    .cta__block-profile {
+      width: 100%;
+    }
+    .text-profile {
+      padding-top: 16px;
+      font-size: 20px;
+      line-height: 28px;
+      color: #000000;
+    }
+
     .cta__button__link {
       background: #000000;
       height: 70px;
@@ -128,6 +138,9 @@
     }
     .second-block {
       padding-top: 8px;
+    }
+    .third-block {
+      padding-left: 72px;
     }
 
     .text-status {
@@ -238,7 +251,7 @@
   </xml><![endif]-->
 </head>
 
-<body style="padding: 0; margin: 0;">
+<body bgcolor="#F9F9F9" style="width: 100%; background: #F9F9F9; padding: 0; margin: 0;">
 
 <!-- / Full width container -->
 <table class="full-width-container" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" bgcolor=""
@@ -391,10 +404,50 @@
 
             </div>
 
-            <table class="footer">
+            <div class="block " style="background-color:{{ template_data.background_color }};margin-bottom: 12px">
+              <table class="container third-block" border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%;">
+                <tr align="center">
+                  <td width="50%">
+                    <table width="300" border="0" cellpadding="0" cellspacing="0">
+                      <tr align="center">
+                        <td>
+                          <img src="../../../icons/instagram-color.png" alt="">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" class="text-profile">
+                          Follow us <br>
+                          <i>@birdbrooklyn</i> <br>
+                          Tag us <br>
+                          <i>#birdbrightlife</i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <table style="padding-top: 24px" class="cta__block-profile" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td class="cta__button__link">
+                                <a href="{{ template_data.instagram_link}}">
+                                  VISIT PROFILE
+                                </a>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td width="50%">
+                    <img src="../../../icons/img-instagram.png" alt="">
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <table class="footer" border="0" cellpadding="0" cellspacing="0">
               <tr>
                 <td valign="top" align="center">
-                  <table>
+                  <table border="0" cellpadding="0" cellspacing="0">
                     <tr>
                       <td>
                         <table class="footer__inner">
