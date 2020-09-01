@@ -31,6 +31,9 @@
       color: #000000;
       padding-top: 8px;
     }
+    .underline {
+      text-decoration: underline;
+    }
 
     .title {
       font-family: 'Miller', serif;
@@ -275,12 +278,10 @@
                   <td class="text-status">Delivery exception</td>
                 </tr>
                 <tr>
-                  <td class="order-number">
-                    Order Number
-                  </td>
+                  <td class="order-number">Order Number <span class="underline">{{ data.order_reference }}</span></td>
                 </tr>
                 <tr>
-                  <td class="order-number">UPS Tracking Number </td>
+                  <td class="order-number">UPS Tracking Number <span class="underline">{{ data.tracking_code }}</span></td>
                 </tr>
 
                 <tr>
