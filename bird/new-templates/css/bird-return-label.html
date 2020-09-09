@@ -33,7 +33,7 @@
 
     .title {
       font-family: 'Miller', serif;
-      padding: 36px 114px 0;
+      padding: 36px 90px 0;
       text-align: center;
       font-size: 40px;
       line-height: 46px;
@@ -44,7 +44,7 @@
       font-size: 20px;
       line-height: 27px;
       color: #000000;
-      padding: 36px 86px 0;
+      padding: 36px 125px 0;
     }
     .underline {
       text-decoration: underline;
@@ -140,9 +140,17 @@
       color: #000000;
 
     }
+    .address-first-block {
+      text-align: center;
+      font-size: 20px;
+      line-height: 27px;
+      padding: 42px 0 28px;
+    }
 
     .block-return-details {
+      background: #ffffff;
       margin-top: 23px;
+      padding: 18px 60px 42px;
     }
     .line-return-block {
       border: 1px solid #D2D2D2;
@@ -202,11 +210,11 @@
               <table class="container fist-block" border="0" cellpadding="0" cellspacing="0" width="620" style="width: 620px;">
                 <tr>
                   <td align="center">
-                    <img src="../../../icons/bird-processed.png" alt="">
+                    <img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-approved.png" alt="">
                   </td>
                 </tr>
                 <tr>
-                  <td class="text-status">Return Confirmation</td>
+                  <td class="text-status">Return approved</td>
                 </tr>
                 <tr>
                   <td class="order-number">Your return authorization number is <span class="underline">{{ data.order_reference }}</span></td>
@@ -225,15 +233,25 @@
                     {{{ data.body_message }}}
                   </td>
                 </tr>
+                <tr>
+                  <td class="address-first-block">
+                    Bird <br>
+                    Attn: Website Returns <br>
+                    {{ template_data.street  }} <br>
+                    {{ template_data.city }}, {{ template_data.state_code }} {{ template_data.postal_code }}
+                  </td>
+                </tr>
               </table>
-              <div class="block-return-details" style="background-color:{{ template_data.background_color }}">
-                <table>
-                  <tr>
-                    <td class="text-status" style="padding-bottom: 27px">Return Details</td>
-                  </tr>
-                </table>
-                <!--              #EACH PRODUCTS-->
-                {{#each data.return_data.items}}
+            </div>
+
+            <div class="block-return-details" style="background-color:{{ template_data.background_color }}">
+              <table>
+                <tr>
+                  <td class="text-status" style="padding-bottom: 27px">Return Details</td>
+                </tr>
+              </table>
+<!--              #EACH PRODUCTS-->
+              {{#each data.return_data.items}}
                 <table width="580" cellspacing="0" cellpadding="0" border="0">
                   <tr>
                     <td class="line-return-block"></td>
@@ -249,29 +267,28 @@
                     <td class="product-return" width="50%" align="right" valign="top">{{ subtotal }}</td>
                   </tr>
                 </table>
-                {{/each}}
-                <!--              /EACH-->
-                <table width="580" cellspacing="0" cellpadding="0" border="0">
-                  <tr>
-                    <td class="line-return-block"></td>
-                  </tr>
-                </table>
+              {{/each}}
+<!--              /EACH-->
+              <table width="580" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="line-return-block"></td>
+                </tr>
+              </table>
 
-                <table width="580" style="" >
-                  <tr>
-                    <td class="product-return-totals" style="padding-top: 26px;" width="50%" align="left">Shipping and other Taxes</td>
-                    <td class="product-return-totals" style="padding-top: 26px;" width="50%" align="right" valign="top">{{ data.return_data.order_fee_amount }}</td>
-                  </tr>
-                  <tr>
-                    <td class="product-return-totals" width="50%" align="left">Return Fee</td>
-                    <td class="product-return-totals" width="50%" align="right" valign="top">{{ data.return_data.return_fee }}</td>
-                  </tr>
-                  <tr>
-                    <td class="product-return-totals" width="50%" align="left">Estimated Refund</td>
-                    <td class="product-return-totals" width="50%" align="right" valign="top">{{ data.return_data.estimated_refund }}</td>
-                  </tr>
-                </table>
-              </div>
+              <table width="580" style="" >
+                <tr>
+                  <td class="product-return-totals" style="padding-top: 26px;" width="50%" align="left">Shipping and other Taxes</td>
+                  <td class="product-return-totals" style="padding-top: 26px;" width="50%" align="right" valign="top">{{ data.return_data.order_fee_amount }}</td>
+                </tr>
+                <tr>
+                  <td class="product-return-totals" width="50%" align="left">Return Fee</td>
+                  <td class="product-return-totals" width="50%" align="right" valign="top">{{ data.return_data.return_fee }}</td>
+                </tr>
+                <tr>
+                  <td class="product-return-totals" width="50%" align="left">Estimated Refund</td>
+                  <td class="product-return-totals" width="50%" align="right" valign="top">{{ data.return_data.estimated_refund }}</td>
+                </tr>
+              </table>
             </div>
 
             <div class="block-care" style="background-color:{{ template_data.background_color }};padding-bottom:7%;">

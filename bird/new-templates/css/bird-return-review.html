@@ -106,91 +106,6 @@
     .fist-block {
       padding-top: 60px;
     }
-
-    @media only screen and (max-width: 700px) {
-      /* ----- Base styles ----- */
-      .full-width-container {
-        padding: 0 !important;
-      }
-
-      .container {
-        width: 100% !important;
-      }
-
-      /* ----- Header ----- */
-      .header td {
-        padding: 30px 15px 30px 15px !important;
-      }
-
-      /* ----- Projects list ----- */
-      .promotions {
-        display: block !important;
-      }
-
-      .projects-list tr {
-        display: block !important;
-      }
-
-      .projects-list td {
-        display: block !important;
-      }
-
-      .projects-list tbody {
-        display: block !important;
-      }
-
-      .projects-list img {
-        margin: 0 auto 25px auto;
-      }
-
-      /* ----- Half block ----- */
-      .half-block tr {
-        display: block !important;
-      }
-
-      .half-block td {
-        display: block !important;
-      }
-
-      /* ----- Hero subheader ----- */
-      .title {
-        padding: 20px 15px 15px 15px !important;
-        font-size: 22px !important;
-      }
-
-      .message {
-        padding: 0 70px 40px 70px !important;
-        font-size: 20px !important;
-      }
-
-      /* ----- Title block ----- */
-      .title-block {
-        padding: 0 15px 0 15px;
-      }
-
-      /* ----- Info bullets ----- */
-      .info-bullets tr {
-        display: block !important;
-      }
-
-      .info-bullets td {
-        display: block !important;
-      }
-
-      .info-bullets tbody {
-        display: block;
-      }
-
-      .cta-block__button {
-        padding: 0 15px 0 15px !important;
-      }
-
-      /* ---Table Product--- */
-      .table__product {
-        padding: 0 40px 0 40px !important;
-      }
-    }
-
   </style>
 
 
@@ -233,19 +148,17 @@
               <table class="container fist-block" border="0" cellpadding="0" cellspacing="0" width="620" style="width: 620px;">
                 <tr>
                   <td align="center">
-                    <img src="../../../icons/bird-request.png" alt="">
+                    <img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-request.png" alt="">
                   </td>
                 </tr>
                 <tr>
                   <td class="title">
-<!--                    {{ data.title }}-->
-                    We've Received Your Return Authorization Request
+                    {{ data.title }}
                   </td>
                 </tr>
                 <tr>
                   <td class="message">
-<!--                    {{{ data.body_message }}}-->
-                    Hi, [First Name]. Your return request has been received. You will be notified once your request has been reviewed.
+                    {{{ data.body_message }}}
                   </td>
                 </tr>
               </table>

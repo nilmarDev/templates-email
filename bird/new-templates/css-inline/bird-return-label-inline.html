@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StoreTemplate</title>
+  <style type="text/css">
+
+    @import url(https://db.onlinewebfonts.com/c/0a086e32e41c5e5960b26626757f07f3?family=Apercu);
+    @import url(//db.onlinewebfonts.com/c/b273a0552fe8f530c8584a79d6d43ec5?family=Miller);
+
+    table, td {
+      font-family: 'Apercu', sans-serif;
+    }
+  </style>
+
+
+  <!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+  </xml><![endif]-->
+</head>
+
+<body bgcolor="#F9F9F9" style="width: 100%; background: #F9F9F9; padding: 0; margin: 0;">
+
+<!-- / Full width container -->
+<table class="full-width-container" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" bgcolor="" style="width: 100%; height: 100%; padding: 30px 0 10px 0;">
+  <tr>
+    <td valign="top" align="center" style="font-family: 'Apercu', sans-serif;">
+
+      <table class="container" style="width:700px" width="700" cellspacing="0" cellpadding="0" border="0">
+        <tbody>
+        <tr>
+          <td valign="top" align="center" style="font-family: 'Apercu', sans-serif;">
+            <table class="header" width="320" cellspacing="0" cellpadding="0" border="0" style="width: 620px;">
+              <tbody>
+              <tr>
+                <td style="padding: 30px 0 30px 0;font-family: 'Apercu', sans-serif;" align="center">
+                  <a href="{{ template_data.logo_link  }}" target="_blank">
+                    <img class="header__logo" alt="Logo image" src="{{ template_data.logo_src  }}" style="width: auto;height: 70px;">
+                  </a>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+
+            <div class="block" style="background-color: {{ template_data.background_color }};padding-bottom: 7%;margin-top: 12px;background: #ffffff;">
+              <table class="container fist-block" border="0" cellpadding="0" cellspacing="0" width="620" style="width: 620px;padding-top: 60px;">
+                <tr>
+                  <td align="center" style="font-family: 'Apercu', sans-serif;">
+                    <img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-approved.png" alt="">
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-status" style="font-family: 'Apercu', sans-serif;padding-top: 24px;text-align: center;font-size: 14px;line-height: 20px;font-weight: bold;letter-spacing: 2px;text-transform: uppercase;color: #000000;">Return approved</td>
+                </tr>
+                <tr>
+                  <td class="order-number" style="font-family: 'Apercu', sans-serif;text-align: center;font-size: 20px;line-height: 20px;color: #000000;padding-top: 8px;">Your return authorization number is <span class="underline" style="text-decoration: underline;">{{ data.order_reference }}</span></td>
+                </tr>
+                <tr>
+                  <td class="order-number" style="font-family: 'Apercu', sans-serif;text-align: center;font-size: 20px;line-height: 20px;color: #000000;padding-top: 8px;">Your order number is <span class="underline" style="text-decoration: underline;">{{ data.order_reference }}</span></td>
+                </tr>
+                <tr>
+                  <td class="title" style="font-family: 'Miller', serif;padding: 36px 90px 0;text-align: center;font-size: 40px;line-height: 46px;color: #000000;">
+                    {{ data.title }}
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="message" style="font-family: 'Apercu', sans-serif;text-align: center;font-size: 20px;line-height: 27px;color: #000000;padding: 36px 125px 0;">
+<!--                    {{{ data.body_message }}}-->
+                    Please include a print-out of this email and send your return to:
+                  </td>
+                </tr>
+                <tr>
+                  <td class="address-first-block" style="font-family: 'Apercu', sans-serif;text-align: center;font-size: 20px;line-height: 27px;padding: 42px 0 28px;">
+                    Bird <br>
+                    Attn: Website Returns <br>
+                    {{ template_data.street  }} <br>
+                    {{ template_data.city }}, {{ template_data.state_code }} {{ template_data.postal_code }}
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="block-return-details" style="background-color: {{ template_data.background_color }};background: #ffffff;margin-top: 23px;padding: 18px 60px 42px;">
+              <table>
+                <tr>
+                  <td class="text-status" style="padding-bottom: 27px;font-family: 'Apercu', sans-serif;padding-top: 24px;text-align: center;font-size: 14px;line-height: 20px;font-weight: bold;letter-spacing: 2px;text-transform: uppercase;color: #000000;">Return Details</td>
+                </tr>
+              </table>
+              <!--              #EACH PRODUCTS-->
+              {{#each data.return_data.items}}
+              <table width="580" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="line-return-block" style="font-family: 'Apercu', sans-serif;border: 1px solid #D2D2D2;"></td>
+                </tr>
+              </table>
+              <table width="580">
+                <tr>
+                  <td class="product-return" width="50%" align="left" style="font-family: 'Apercu', sans-serif;padding-top: 27px;padding-bottom: 35px;font-size: 16px;line-height: 26px;color: #101010;">
+                    {{ description}} <br>
+                    Quantity: {{ quantity }} <br>
+                    Item Nº. {{ item_identifier }}
+                  </td>
+                  <td class="product-return" width="50%" align="right" valign="top" style="font-family: 'Apercu', sans-serif;padding-top: 27px;padding-bottom: 35px;font-size: 16px;line-height: 26px;color: #101010;">{{ subtotal }}</td>
+                </tr>
+              </table>
+              {{/each}}
+              <!--              /EACH-->
+              <table width="580" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="line-return-block" style="font-family: 'Apercu', sans-serif;border: 1px solid #D2D2D2;"></td>
+                </tr>
+              </table>
+
+              <table width="580" style="">
+                <tr>
+                  <td class="product-return-totals" style="padding-top: 26px;font-family: 'Apercu', sans-serif;font-size: 16px;line-height: 26px;color: #767676;" width="50%" align="left">Shipping and other Taxes</td>
+                  <td class="product-return-totals" style="padding-top: 26px;font-family: 'Apercu', sans-serif;font-size: 16px;line-height: 26px;color: #767676;" width="50%" align="right" valign="top">{{ data.return_data.order_fee_amount }}</td>
+                </tr>
+                <tr>
+                  <td class="product-return-totals" width="50%" align="left" style="font-family: 'Apercu', sans-serif;font-size: 16px;line-height: 26px;color: #767676;">Return Fee</td>
+                  <td class="product-return-totals" width="50%" align="right" valign="top" style="font-family: 'Apercu', sans-serif;font-size: 16px;line-height: 26px;color: #767676;">{{ data.return_data.return_fee }}</td>
+                </tr>
+                <tr>
+                  <td class="product-return-totals" width="50%" align="left" style="font-family: 'Apercu', sans-serif;font-size: 16px;line-height: 26px;color: #767676;">Estimated Refund</td>
+                  <td class="product-return-totals" width="50%" align="right" valign="top" style="font-family: 'Apercu', sans-serif;font-size: 16px;line-height: 26px;color: #767676;">{{ data.return_data.estimated_refund }}</td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="block-care" style="background-color: {{ template_data.background_color }};padding-bottom: 7%;margin-top: 24px;margin-bottom: 36px;background: #ffffff;">
+              <table class="container second-block" border="0" cellpadding="0" cellspacing="0" width="620" style="width: 620px;padding-top: 16px;">
+                <tr>
+                  <td class="title" style="font-family: 'Miller', serif;padding: 36px 90px 0;text-align: center;font-size: 40px;line-height: 46px;color: #000000;">Customer Care</td>
+                </tr>
+                <tr>
+                  <td class="care-message" style="font-family: 'Apercu', sans-serif;padding-top: 12px;text-align: center;font-size: 20px;line-height: 27px;color: #000000;">Have questions about your order? We’re here to help.</td>
+                </tr>
+              </table>
+
+              <a class="care-link" href="mailto:shop@birdbrooklyn.com" style="text-decoration: none;">
+                <table style="padding: 42px 164px 21px ;" width="655">
+                  <tr align="center">
+                    <td style="font-family: 'Apercu', sans-serif;"><img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-mail-1.png" alt=""></td>
+                    <td class="care-text" style="font-family: 'Apercu', sans-serif;font-weight: 500;font-size: 16px;line-height: 26px;color: #000000;">Email Us | shop@birdbrooklyn.com</td>
+                    <td style="font-family: 'Apercu', sans-serif;"><img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-arrow-black.png" alt=""></td>
+                  </tr>
+                </table>
+              </a>
+              <table width="580" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="care-line" style="font-family: 'Apercu', sans-serif;border: 1px solid #DDDDDD;"></td>
+                </tr>
+              </table>
+
+              <a class="care-link" href="https://birdbrooklyn.com/pages/customer-service" target="_blank" style="text-decoration: none;">
+                <table style="padding: 21px 50px 21px ;" width="655">
+                  <tr align="center">
+                    <td style="font-family: 'Apercu', sans-serif;"><img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-phone-2.png" alt=""></td>
+                    <td class="care-text" style="font-family: 'Apercu', sans-serif;font-weight: 500;font-size: 16px;line-height: 26px;color: #000000;">Call Us Monday - Friday, 10 AM - 6 PM ET | (718) 388-3707</td>
+                    <td style="font-family: 'Apercu', sans-serif;"><img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-arrow-black.png" alt=""></td>
+                  </tr>
+                </table>
+              </a>
+              <table width="580" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="care-line" style="font-family: 'Apercu', sans-serif;border: 1px solid #DDDDDD;"></td>
+                </tr>
+              </table>
+
+              <a class="care-link" href="https://birdbrooklyn.com/pages/stores" target="_blank" style="text-decoration: none;">
+                <table style="padding: 21px 200px 21px ;" width="655">
+                  <tr align="center">
+                    <td style="font-family: 'Apercu', sans-serif;"><img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-location-3.png" alt=""></td>
+                    <td class="care-text" style="font-family: 'Apercu', sans-serif;font-weight: 500;font-size: 16px;line-height: 26px;color: #000000;">Find your local store</td>
+                    <td style="font-family: 'Apercu', sans-serif;"><img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-arrow-black.png" alt=""></td>
+                  </tr>
+                </table>
+              </a>
+
+            </div>
+
+            <table class="footer" cellspacing="0" cellpadding="0" border="0">
+              <tr>
+                <td valign="top" align="center" style="font-family: 'Apercu', sans-serif;">
+                  <table cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                      <td style="font-family: 'Apercu', sans-serif;">
+                        <table class="footer__inner" style="padding: 32px;width: 700px;height: 267px;background: #000000;">
+                          <tr>
+                            <td class="footer__links" style="font-family: 'Apercu', sans-serif;width: 630px;border-bottom: 1px solid #ffffff;padding-bottom: 30px;">
+                              <table class="container table_product" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tbody>
+                                <tr>
+                                  <td width="200" style="font-family: 'Apercu', sans-serif;">
+                                    <a href="{{ template_data.logo_link }}" target="_blank">
+                                      <img class="footer__logo" alt="Logo image" src="https://relay-cloud-production.s3.amazonaws.com/static/bird_black.png" style="width: auto;height: 65px;">
+                                    </a>
+                                  </td>
+                                  {{#each template_data.menu_links}}
+                                  <td class="footer__links__title" style="font-family: 'Apercu', sans-serif;padding-top: 30px;font-size: 16px;color: #333333;font-weight: bold;">
+                                    <a href="{{ link }}" style="text-decoration: none;color: #ffffff;" target="_blank">{{ title }}</a>
+                                  </td>
+                                  {{/each}}
+                                </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-family: 'Apercu', sans-serif;">
+                              <table class="container" style="width:620px;margin-top: 20px" width="620" cellspacing="0" cellpadding="0" border="0" align="center">
+                                <tbody>
+                                <tr>
+                                  <td style="color: #ffffff;font-size: 18px;line-height: 16px;font-family: 'Apercu', sans-serif;">
+                                    {{ template_data.store_name }}
+                                  </td>
+                                  <td style="color: #ffffff;font-size: 18px;line-height: 16px;font-family: 'Apercu', sans-serif;">
+                                    {{ template_data.street  }}
+                                  </td>
+                                  <td style="color: #ffffff;font-size: 18px;line-height: 16px;font-family: 'Apercu', sans-serif;">
+                                    {{ template_data.city }}, {{ template_data.state_code }} {{ template_data.postal_code }}
+                                  </td>
+                                  <td style="color: #ffffff;font-size: 18px;line-height: 16px;font-family: 'Apercu', sans-serif;">
+                                    (718) 388-3737
+                                  </td>
+                                </tr>
+                                </tbody>
+                              </table>
+                              <table align="center">
+                                <tr>
+                                  <td style="color: #ffffff;font-size: 14px;line-height: 24px;padding-top: 25px;width: 70%;font-family: 'Apercu', sans-serif;">
+                                    We send special offers to customers who opted in at checkout.
+                                    Copyright 2020 {{ template_data.store_name }}, All rights reserved.
+                                  </td>
+
+                                  <td align="center" style="font-family: 'Apercu', sans-serif;">
+
+                                    <table style="width:60px;height:2px" width="60" height="2" cellspacing="0" cellpadding="0" border="0">
+                                      <tbody>
+                                      {{#if template_data.show_social_links}}
+                                      <tr>
+                                        {{#if template_data.instagram_link}}
+                                        <td style="padding: 25px 15px 10px;width: 60px;height: 2px;font-size: 1px;font-family: 'Apercu', sans-serif;" width="60" height="2" align="center">
+                                          <a href="{{ template_data.instagram_link }}" target="_blank"><img alt="Instagram" src="https://relay-cloud-production.s3.amazonaws.com/static/instagram-white.png" class="CToWUd"></a>
+                                        </td>
+                                        {{/if}}
+                                        {{#if template_data.pinterest_link }}
+                                        <td style="padding: 25px 15px 10px;width: 60px;height: 2px;font-size: 1px;font-family: 'Apercu', sans-serif;" width="60" height="2" align="center">
+                                          <a href="{{ template_data.pinterest_link }}" target="_blank"><img alt="Pinterest" src="https://relay-cloud-production.s3.amazonaws.com/static/pinterest-white.png" class="CToWUd"></a>
+                                        </td>
+                                        {{/if}}
+                                        {{#if template_data.facebook_link}}
+                                        <td style="padding: 25px 15px 10px;width: 60px;height: 2px;font-size: 1px;font-family: 'Apercu', sans-serif;" width="60" height="2" align="center">
+                                          <a href="{{ template_data.facebook_link }}" target="_blank"><img alt="Facebook" src="https://relay-cloud-production.s3.amazonaws.com/static/facebook-white.png" class="CToWUd"></a>
+                                        </td>
+                                        {{/if}}
+                                        {{#if template_data.twitter_link }}
+                                        <td style="padding: 25px 15px 10px;width: 60px;height: 2px;font-size: 1px;font-family: 'Apercu', sans-serif;" width="60" height="2" align="center">
+                                          <a href="{{ template_data.twitter_link }}" target="_blank"><img alt="Twitter" src="https://relay-cloud-production.s3.amazonaws.com/static/twitter-white.png" class="CToWUd"></a>
+                                        </td>
+                                        {{/if}}
+                                      </tr>
+                                      {{/if}}
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
