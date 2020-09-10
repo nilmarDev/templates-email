@@ -107,7 +107,7 @@
     }
     .footer__links__title a {
       color: #ffffff;
-      margin-right: 36px;
+      margin-right: 16px;
     }
     .footer__links__title img {
       margin-left: 12px;
@@ -117,6 +117,7 @@
     }
 
     .footer-icons a {
+      text-decoration: none;
       padding: 0 12px;
     }
 
@@ -260,9 +261,15 @@
                 </td>
               </tr>
               <tr>
-                <td align="center" style="color:#ffffff;font-size:12px;line-height:20px;padding:32px 0 42px 0">
-                  We send special offers to customers who opted in at checkout. <br>
-                  Copyright 2020 Bird Brooklyn, All rights reserved.
+                <td align="center">
+                  <table width="380" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                      <td align="center" style="color:#ffffff;font-size:12px;line-height:20px;padding:32px 0 42px 0">
+                        We send special offers to customers who opted in at checkout.
+                        Copyright 2020 Bird Brooklyn, All rights reserved.
+                      </td>
+                    </tr>
+                  </table>
                 </td>
               </tr>
               {{#if template_data.show_social_links}}

@@ -223,7 +223,7 @@
             </div>
 
             <!--            new Footer-->
-
+,
             <table width="100%" class="footer" cellspacing="0" cellpadding="0" border="0" style="background: #000000;padding: 32px 80px;">
               <tr>
                 <td align="center" style="font-family: 'Apercu', sans-serif;">
@@ -233,9 +233,9 @@
                 </td>
               </tr>
               <tr>
-                <td align="center" class="footer__links__title" style="font-family: 'Apercu', sans-serif;padding: 32px 0;font-size: 16px;text-transform: uppercase;color: #333333;font-weight: bold;">
+                <td align="center" class="footer__links__title" style="font-family: 'Apercu', sans-serif;padding: 32px 0;font-size: 15px;text-transform: uppercase;color: #333333;font-weight: bold;">
                   {{#each template_data.menu_links}}
-                  <a href="{{ link }}" style="text-decoration: none;color: #ffffff;margin-right: 36px;" target="_blank">
+                  <a href="{{ link }}" style="text-decoration: none;color: #ffffff;margin-right: 16px;" target="_blank">
                     {{ title }} <img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-arrow-white.png" alt="" style="margin-left: 12px;">
                   </a>
                   {{/each}}
@@ -255,34 +255,42 @@
                 </td>
               </tr>
               <tr>
-                <td align="center" style="color: #ffffff;font-size: 12px;line-height: 20px;padding: 32px 0 42px 0;font-family: 'Apercu', sans-serif;">
-                  We send special offers to customers who opted in at checkout. <br>
-                  Copyright 2020 Bird Brooklyn, All rights reserved.
+                <td align="center">
+                  <table width="380" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                      <td align="center" style="color:#ffffff;font-size:12px;line-height:20px;padding:32px 0 42px 0">
+                        We send special offers to customers who opted in at checkout.
+                        Copyright 2020 Bird Brooklyn, All rights reserved.
+                      </td>
+                    </tr>
+                  </table>
                 </td>
               </tr>
               {{#if template_data.show_social_links}}
               <tr>
                 <td class="footer-icons" align="center" style="font-family: 'Apercu', sans-serif;">
                   {{#if template_data.facebook_link}}
-                  <a href="{{ template_data.facebook_link }}" target="_blank" style="padding: 0 12px;"><img alt="Facebook" src="https://relay-cloud-production.s3.amazonaws.com/static/facebook-white.png">
+                  <a href="{{ template_data.facebook_link }}" target="_blank" style="padding: 0 12px;text-decoration: none"><img alt="Facebook" src="https://relay-cloud-production.s3.amazonaws.com/static/facebook-white.png">
                   </a>
                   {{/if}}
                   {{#if template_data.instagram_link}}
-                  <a href="{{ template_data.instagram_link }}" target="_blank" style="padding: 0 12px;"><img alt="Instagram" src="https://relay-cloud-production.s3.amazonaws.com/static/instagram-white.png">
+                  <a href="{{ template_data.instagram_link }}" target="_blank" style="padding: 0 12px;text-decoration: none"><img alt="Instagram" src="https://relay-cloud-production.s3.amazonaws.com/static/instagram-white.png">
                   </a>
                   {{/if}}
                   {{#if template_data.pinterest_link}}
-                  <a href="{{ template_data.pinterest_link }}" target="_blank" style="padding: 0 12px;"><img alt="Pinterest" src="https://relay-cloud-production.s3.amazonaws.com/static/pinterest-white.png">
+                  <a href="{{ template_data.pinterest_link }}" target="_blank" style="padding: 0 12px;text-decoration: none"><img alt="Pinterest" src="https://relay-cloud-production.s3.amazonaws.com/static/pinterest-white.png">
                   </a>
                   {{/if}}
                   {{#if template_data.twitter_link}}
-                  <a href="{{ template_data.twitter_link }}" target="_blank" style="padding: 0 12px;"><img alt="Twitter" src="https://relay-cloud-production.s3.amazonaws.com/static/twitter-white.png">
+                  <a href="{{ template_data.twitter_link }}" target="_blank" style="padding: 0 12px;text-decoration: none"><img alt="Twitter" src="https://relay-cloud-production.s3.amazonaws.com/static/twitter-white.png">
                   </a>
                   {{/if}}
                 </td>
               </tr>
               {{/if}}
             </table>
+
+<!--            End Footer-->
           </td>
         </tr>
         </tbody>
