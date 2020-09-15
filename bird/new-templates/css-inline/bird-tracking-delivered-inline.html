@@ -7,11 +7,8 @@
   <title>StoreTemplate</title>
   <style type="text/css">
 
-    @import url(https://db.onlinewebfonts.com/c/0a086e32e41c5e5960b26626757f07f3?family=Apercu);
-    @import url(https://db.onlinewebfonts.com/c/b273a0552fe8f530c8584a79d6d43ec5?family=Miller);
-
     table, td, a {
-      font-family: 'Apercu', sans-serif;
+      font-family: "Times New Roman", Times, serif;
     }
   </style>
 
@@ -30,17 +27,17 @@
 <!-- / Full width container -->
 <table class="full-width-container" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" bgcolor="" style="width: 100%; height: 100%; padding: 30px 0 10px 0;">
   <tr>
-    <td valign="top" align="center" style="font-family: 'Apercu', sans-serif;">
+    <td valign="top" align="center" style="font-family: 'Times New Roman', Times, serif;">
 
       <table class="container" style="width:700px" width="700" cellspacing="0" cellpadding="0" border="0">
         <tbody>
         <tr>
-          <td valign="top" align="center" style="font-family: 'Apercu', sans-serif;">
+          <td valign="top" align="center" style="font-family: 'Times New Roman', Times, serif;">
             <table class="header" width="320" cellspacing="0" cellpadding="0" border="0" style="width: 620px;">
               <tbody>
               <tr>
-                <td style="padding: 30px 0 30px 0;font-family: 'Apercu', sans-serif;" align="center">
-                  <a href="{{ template_data.logo_link  }}" target="_blank" style="font-family: 'Apercu', sans-serif;">
+                <td style="padding: 30px 0 30px 0;font-family: 'Times New Roman', Times, serif;" align="center">
+                  <a href="{{ template_data.logo_link  }}" target="_blank" style="font-family: 'Times New Roman', Times, serif;">
                     <img class="header__logo" alt="Logo image" src="{{ template_data.logo_src  }}" style="width: auto;height: 70px;">
                   </a>
                 </td>
@@ -51,25 +48,25 @@
             <div class="block" style="background-color: {{ template_data.background_color }};padding-bottom: 7%;margin-top: 12px;background: #ffffff;">
               <table class="container fist-block" border="0" cellpadding="0" cellspacing="0" width="620" style="width: 620px;padding-top: 60px;">
                 <tr>
-                  <td align="center" style="font-family: 'Apercu', sans-serif;">
+                  <td align="center" style="font-family: 'Times New Roman', Times, serif;">
                     <img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-brooklyn/bird-track-delivered.png" alt="">
                   </td>
                 </tr>
                 <tr>
-                  <td class="text-status" style="font-family: 'Apercu', sans-serif;padding-top: 24px;text-align: center;font-size: 14px;line-height: 20px;font-weight: bold;letter-spacing: 2px;text-transform: uppercase;color: #000000;">good news!</td>
+                  <td class="text-status" style="font-family: 'Times New Roman', Times, serif;padding-top: 24px;text-align: center;font-size: 14px;line-height: 20px;font-weight: bold;letter-spacing: 2px;text-transform: uppercase;color: #000000;">good news!</td>
                 </tr>
                 <tr>
-                  <td class="order-number" style="font-family: 'Apercu', sans-serif;text-align: center;font-size: 20px;color: #000000;padding-top: 8px;">Order Number <span class="underline" style="text-decoration: underline;">{{ data.order_reference }}</span></td>
+                  <td class="order-number" style="font-family: 'Times New Roman', Times, serif;text-align: center;font-size: 20px;color: #000000;padding-top: 8px;">Order Number <span class="underline" style="text-decoration: underline;">{{ data.order_reference }}</span></td>
                 </tr>
 
                 <tr>
-                  <td class="title" style="font-family: 'Miller', serif;padding-top: 60px;text-align: center;font-size: 40px;line-height: 59px;color: #000000;">
+                  <td class="title" style="font-family: 'Times New Roman', Times, serif;padding-top: 60px;text-align: center;font-size: 40px;line-height: 59px;color: #000000;">
                     {{ data.title }}
                   </td>
                 </tr>
 
                 <tr>
-                  <td class="message" style="font-family: 'Apercu', sans-serif;text-align: center;font-size: 20px;line-height: 30px;color: #000000;padding: 20px 70px 0;">
+                  <td class="message" style="font-family: 'Times New Roman', Times, serif;text-align: center;font-size: 20px;line-height: 30px;color: #000000;padding: 20px 70px 0;">
                     {{{ data.body_message }}}
                   </td>
                 </tr>
@@ -77,11 +74,11 @@
 
               <table style="padding: 52px 0 0 0;" width="655">
                 <tr>
-                  <td align="center" style="font-family: 'Apercu', sans-serif;">
+                  <td align="center" style="font-family: 'Times New Roman', Times, serif;">
                     <table class="cta__block" border="0" cellpadding="0" cellspacing="0" style="width: 497px;">
                       <tr>
-                        <td class="cta__button__link" style="font-family: 'Apercu', sans-serif;background: #000000;height: 70px;text-transform: uppercase;text-align: center;font-size: 14px;letter-spacing: 2px;font-weight: bold;">
-                          <a href="{{ data.button_link }}" style="font-family: 'Apercu', sans-serif;text-decoration: none;color: #ffffff;">
+                        <td class="cta__button__link" style="font-family: 'Times New Roman', Times, serif;background: #000000;text-transform: uppercase;text-align: center;font-size: 14px;letter-spacing: 2px;">
+                          <a href="{{ data.button_link }}" style="text-decoration: none;color: #ffffff; padding: 20px;display: block">
                             TRACK YOUR ORDER
                           </a>
                         </td>
@@ -95,75 +92,75 @@
             <div class="block" style="background-color: {{ template_data.background_color }};padding-bottom: 7%;margin-top: 12px;background: #ffffff;">
               <table class="container second-block" border="0" cellpadding="0" cellspacing="0" width="620" style="width: 620px;padding-top: 8px;">
                 <tr>
-                  <td class="title" style="font-family: 'Miller', serif;padding-top: 60px;text-align: center;font-size: 40px;line-height: 59px;color: #000000;">Customer Care</td>
+                  <td class="title" style="font-family: 'Times New Roman', Times, serif;padding-top: 60px;text-align: center;font-size: 40px;line-height: 59px;color: #000000;">Customer Care</td>
                 </tr>
                 <tr>
-                  <td class="care-message" style="font-family: 'Apercu', sans-serif;padding-top: 12px;text-align: center;font-size: 20px;line-height: 27px;color: #000000;">Have questions about your order? We’re here to help.</td>
+                  <td class="care-message" style="font-family: 'Times New Roman', Times, serif;padding-top: 12px;text-align: center;font-size: 20px;line-height: 27px;color: #000000;">Have questions about your order? We’re here to help.</td>
                 </tr>
               </table>
 
-              <a class="care-link" href="mailto:shop@birdbrooklyn.com" style="font-family: 'Apercu', sans-serif;text-decoration: none;">
+              <a class="care-link" href="mailto:shop@birdbrooklyn.com" style="font-family: 'Times New Roman', Times, serif;text-decoration: none;">
                 <table style="padding: 42px 164px 21px ;" width="655">
                   <tr align="center">
-                    <td style="font-family: 'Apercu', sans-serif;"><img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-brooklyn/bird-mail-1.png" alt=""></td>
-                    <td class="care-text" style="font-family: 'Apercu', sans-serif;font-weight: 500;font-size: 16px;line-height: 26px;color: #000000;">Email Us | shop@birdbrooklyn.com</td>
-                    <td style="font-family: 'Apercu', sans-serif;"><img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-brooklyn/bird-arrow-black.png" alt=""></td>
+                    <td style="font-family: 'Times New Roman', Times, serif;"><img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-brooklyn/bird-mail-1.png" alt=""></td>
+                    <td class="care-text" style="font-family: 'Times New Roman', Times, serif;font-weight: 500;font-size: 16px;line-height: 26px;color: #000000;">Email Us | shop@birdbrooklyn.com</td>
+                    <td style="font-family: 'Times New Roman', Times, serif;"><img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-brooklyn/bird-arrow-black.png" alt=""></td>
                   </tr>
                 </table>
               </a>
               <table width="580" cellspacing="0" cellpadding="0" border="0">
                 <tr>
-                  <td class="care-line" style="font-family: 'Apercu', sans-serif;border: 1px solid #DDDDDD;"></td>
+                  <td class="care-line" style="font-family: 'Times New Roman', Times, serif;border: 1px solid #DDDDDD;"></td>
                 </tr>
               </table>
 
-              <a class="care-link" href="https://birdbrooklyn.com/pages/customer-service" target="_blank" style="font-family: 'Apercu', sans-serif;text-decoration: none;">
+              <a class="care-link" href="tel:718%E2%80%93797%E2%80%933776" style="font-family: 'Times New Roman', Times, serif;text-decoration: none;">
                 <table style="padding: 21px 50px 21px ;" width="655">
                   <tr align="center">
-                    <td style="font-family: 'Apercu', sans-serif;"><img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-brooklyn/bird-phone-2.png" alt=""></td>
-                    <td class="care-text" style="font-family: 'Apercu', sans-serif;font-weight: 500;font-size: 16px;line-height: 26px;color: #000000;">Call Us Monday - Friday, 10 AM - 6 PM ET | (718) 388-3707</td>
-                    <td style="font-family: 'Apercu', sans-serif;"><img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-brooklyn/bird-arrow-black.png" alt=""></td>
+                    <td style="font-family: 'Times New Roman', Times, serif;"><img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-brooklyn/bird-phone-2.png" alt=""></td>
+                    <td class="care-text" style="font-family: 'Times New Roman', Times, serif;font-weight: 500;font-size: 16px;line-height: 26px;color: #000000;">Call Us Monday - Friday, 10 AM - 6 PM ET | 718-797-3776</td>
+                    <td style="font-family: 'Times New Roman', Times, serif;"><img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-brooklyn/bird-arrow-black.png" alt=""></td>
                   </tr>
                 </table>
               </a>
               <table width="580" cellspacing="0" cellpadding="0" border="0">
                 <tr>
-                  <td class="care-line" style="font-family: 'Apercu', sans-serif;border: 1px solid #DDDDDD;"></td>
+                  <td class="care-line" style="font-family: 'Times New Roman', Times, serif;border: 1px solid #DDDDDD;"></td>
                 </tr>
               </table>
 
-              <a class="care-link" href="https://birdbrooklyn.com/pages/stores" target="_blank" style="font-family: 'Apercu', sans-serif;text-decoration: none;">
+              <a class="care-link" href="https://birdbrooklyn.com/pages/stores" target="_blank" style="font-family: 'Times New Roman', Times, serif;text-decoration: none;">
                 <table style="padding: 21px 200px 21px ;" width="655">
                   <tr align="center">
-                    <td style="font-family: 'Apercu', sans-serif;"><img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-brooklyn/bird-location-3.png" alt=""></td>
-                    <td class="care-text" style="font-family: 'Apercu', sans-serif;font-weight: 500;font-size: 16px;line-height: 26px;color: #000000;">Find your local store</td>
-                    <td style="font-family: 'Apercu', sans-serif;"><img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-brooklyn/bird-arrow-black.png" alt=""></td>
+                    <td style="font-family: 'Times New Roman', Times, serif;"><img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-brooklyn/bird-location-3.png" alt=""></td>
+                    <td class="care-text" style="font-family: 'Times New Roman', Times, serif;font-weight: 500;font-size: 16px;line-height: 26px;color: #000000;">Find your local store</td>
+                    <td style="font-family: 'Times New Roman', Times, serif;"><img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-brooklyn/bird-arrow-black.png" alt=""></td>
                   </tr>
                 </table>
               </a>
               <table width="580" cellspacing="0" cellpadding="0" border="0">
                 <tr>
-                  <td class="care-line" style="font-family: 'Apercu', sans-serif;border: 1px solid #DDDDDD;"></td>
+                  <td class="care-line" style="font-family: 'Times New Roman', Times, serif;border: 1px solid #DDDDDD;"></td>
                 </tr>
               </table>
 
-              <a class="care-link" href="https://return.relaycloud.io/?app=7" target="_blank" style="font-family: 'Apercu', sans-serif;text-decoration: none;">
+              <a class="care-link" href="https://return.relaycloud.io/?app=7" target="_blank" style="font-family: 'Times New Roman', Times, serif;text-decoration: none;">
                 <table style="padding: 21px 166px 21px ;" width="655">
                   <tr align="center">
-                    <td style="font-family: 'Apercu', sans-serif;"><img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-brooklyn/bird-return-4.png" alt=""></td>
-                    <td class="care-text" style="font-family: 'Apercu', sans-serif;font-weight: 500;font-size: 16px;line-height: 26px;color: #000000;">Didn’t work out? Request a return</td>
-                    <td style="font-family: 'Apercu', sans-serif;"><img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-brooklyn/bird-arrow-black.png" alt=""></td>
+                    <td style="font-family: 'Times New Roman', Times, serif;"><img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-brooklyn/bird-return-4.png" alt=""></td>
+                    <td class="care-text" style="font-family: 'Times New Roman', Times, serif;font-weight: 500;font-size: 16px;line-height: 26px;color: #000000;">Didn’t work out? Request a return</td>
+                    <td style="font-family: 'Times New Roman', Times, serif;"><img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-brooklyn/bird-arrow-black.png" alt=""></td>
                   </tr>
                 </table>
               </a>
 
               <table style="padding: 20px 0 0 0;" width="655">
                 <tr>
-                  <td align="center" style="font-family: 'Apercu', sans-serif;">
+                  <td align="center" style="font-family: 'Times New Roman', Times, serif;">
                     <table class="cta__block" border="0" cellpadding="0" cellspacing="0" style="width: 497px;">
                       <tr>
-                        <td class="cta__button__link" style="font-family: 'Apercu', sans-serif;background: #000000;height: 70px;text-transform: uppercase;text-align: center;font-size: 14px;letter-spacing: 2px;font-weight: bold;">
-                          <a href="https://birdbrooklyn.com/pages/customer-service" target="_blank" style="font-family: 'Apercu', sans-serif;text-decoration: none;color: #ffffff;">
+                        <td class="cta__button__link" style="font-family: 'Times New Roman', Times, serif;background: #000000;text-transform: uppercase;text-align: center;font-size: 14px;letter-spacing: 2px;">
+                          <a href="https://birdbrooklyn.com/pages/customer-service" target="_blank" style="font-family: 'Times New Roman', Times, serif;text-decoration: none;color: #ffffff;display:block;padding: 20px">
                             VIEW RETURN POLICY
                           </a>
                         </td>
@@ -178,27 +175,27 @@
             <div class="block " style="background-color: {{ template_data.background_color }};margin-bottom: 12px;margin-top: 12px;background: #ffffff;">
               <table class="container third-block" border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%;padding-left: 72px;">
                 <tr align="center">
-                  <td width="50%" style="font-family: 'Apercu', sans-serif;">
+                  <td width="50%" style="font-family: 'Times New Roman', Times, serif;">
                     <table width="300" border="0" cellpadding="0" cellspacing="0">
                       <tr align="center">
-                        <td style="font-family: 'Apercu', sans-serif;">
+                        <td style="font-family: 'Times New Roman', Times, serif;">
                           <img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-brooklyn/bird-instagram-color.png" alt="">
                         </td>
                       </tr>
                       <tr>
-                        <td align="center" class="text-profile" style="font-family: 'Apercu', sans-serif;padding-top: 16px;font-size: 20px;line-height: 28px;color: #000000;">
+                        <td align="center" class="text-profile" style="font-family: 'Times New Roman', Times, serif;padding-top: 16px;font-size: 20px;line-height: 28px;color: #000000;">
                           Follow us <br>
-                          <span class="italic" style="font-style: italic;">@birdbrooklyn</span> <br>
+                          <span class="italic" style="font-weight: bold;">@birdbrooklyn</span> <br>
                           Tag us <br>
-                          <span class="italic" style="font-style: italic;">#birdbrightlife</span>
+                          <span class="italic" style="font-weight: bold;">#birdbrightlife</span>
                         </td>
                       </tr>
                       <tr>
-                        <td style="font-family: 'Apercu', sans-serif;">
+                        <td style="font-family: 'Times New Roman', Times, serif;">
                           <table style="padding-top: 24px;width: 100%;" class="cta__block-profile" border="0" cellpadding="0" cellspacing="0">
                             <tr>
-                              <td class="cta__button__link" style="font-family: 'Apercu', sans-serif;background: #000000;height: 70px;text-transform: uppercase;text-align: center;font-size: 14px;letter-spacing: 2px;font-weight: bold;">
-                                <a href="{{ template_data.instagram_link}}" style="font-family: 'Apercu', sans-serif;text-decoration: none;color: #ffffff;">
+                              <td class="cta__button__link" style="font-family: 'Times New Roman', Times, serif;background: #000000;text-transform: uppercase;text-align: center;font-size: 14px;letter-spacing: 2px;">
+                                <a href="{{ template_data.instagram_link}}" style="font-family: 'Times New Roman', Times, serif;text-decoration: none;color: #ffffff;display:block;padding: 20px">
                                   VISIT PROFILE
                                 </a>
                               </td>
@@ -208,7 +205,7 @@
                       </tr>
                     </table>
                   </td>
-                  <td width="50%" style="font-family: 'Apercu', sans-serif;">
+                  <td width="50%" style="font-family: 'Times New Roman', Times, serif;">
                     <img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-brooklyn/bird-image-37.png" alt="">
                   </td>
                 </tr>
@@ -217,14 +214,14 @@
 
             <table width="100%" class="footer" cellspacing="0" cellpadding="0" border="0" style="background: #000000;padding: 32px 80px;">
               <tr>
-                <td align="center" style="font-family: 'Apercu', sans-serif;">
+                <td align="center" style="font-family: 'Times New Roman', Times, serif;">
                   <a href="{{ template_data.logo_link }}" target="_blank">
                     <img class="footer__logo" alt="Logo image" src="https://relay-cloud-production.s3.amazonaws.com/static/bird_black.png" style="width: auto;height: 65px;">
                   </a>
                 </td>
               </tr>
               <tr>
-                <td align="center" class="footer__links__title" style="font-family: 'Apercu', sans-serif;padding: 32px 0;font-size: 15px;text-transform: uppercase;color: #333333;font-weight: bold;">
+                <td align="center" class="footer__links__title" style="font-family: 'Times New Roman', Times, serif;padding: 32px 0;font-size: 15px;text-transform: uppercase;color: #333333;font-weight: bold;">
                   {{#each template_data.menu_links}}
                   <a href="{{ link }}" style="text-decoration: none;color: #ffffff;margin-right: 16px;" target="_blank">
                     {{ title }} <img src="https://relay-cloud-production.s3.amazonaws.com/static/bird-brooklyn/bird-arrow-white.png" alt="" style="margin-left: 12px;">
@@ -233,15 +230,15 @@
                 </td>
               </tr>
               <tr>
-                <td class="footer-line" style="font-family: 'Apercu', sans-serif;border: 1px solid #DDDDDD;"></td>
+                <td class="footer-line" style="font-family: 'Times New Roman', Times, serif;border: 1px solid #DDDDDD;"></td>
               </tr>
               <tr>
-                <td align="center" style="color: #ffffff;font-size: 16px;line-height: 16px;padding: 24px 0;font-family: 'Apercu', sans-serif;">
+                <td align="center" style="color: #ffffff;font-size: 16px;line-height: 16px;padding: 24px 0;font-family: 'Times New Roman', Times, serif;">
                   {{ template_data.store_name }}  |  {{ template_data.street  }}  |  {{ template_data.city }}, {{ template_data.state_code }} {{ template_data.postal_code }}
                 </td>
               </tr>
               <tr>
-                <td align="center" style="color: #ffffff;font-size: 16px;line-height: 16px;font-family: 'Apercu', sans-serif;">
+                <td align="center" style="color: #ffffff;font-size: 16px;line-height: 16px;font-family: 'Times New Roman', Times, serif;">
                   718-797-3776
                 </td>
               </tr>
@@ -259,7 +256,7 @@
               </tr>
               {{#if template_data.show_social_links}}
               <tr>
-                <td class="footer-icons" align="center" style="font-family: 'Apercu', sans-serif;">
+                <td class="footer-icons" align="center" style="font-family: 'Times New Roman', Times, serif;">
                   {{#if template_data.facebook_link}}
                   <a href="{{ template_data.facebook_link }}" target="_blank" style="padding: 0 12px;text-decoration: none"><img alt="Facebook" src="https://relay-cloud-production.s3.amazonaws.com/static/facebook-white.png">
                   </a>
