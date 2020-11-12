@@ -135,10 +135,12 @@
                   <td class="product-return-totals" width="50%" align="left" style="font-family: 'Times New Roman', Times, serif;font-size: 16px;line-height: 26px;color: #767676;">Subtotal</td>
                   <td class="product-return-totals" width="50%" align="right" valign="top" style="font-family: 'Times New Roman', Times, serif;font-size: 16px;line-height: 26px;color: #767676;">${{ data.subtotal }}</td>
                 </tr>
-                <tr>
-                  <td class="product-return-totals" width="50%" align="left" style="font-family: 'Times New Roman', Times, serif;font-size: 16px;line-height: 26px;color: #767676;">Discounts</td>
-                  <td class="product-return-totals" width="50%" align="right" valign="top" style="font-family: 'Times New Roman', Times, serif;font-size: 16px;line-height: 26px;color: #767676;">${{ data.discounts }}</td>
-                </tr>
+                {{#if data.show_discounts }}
+                  <tr>
+                    <td class="product-return-totals" width="50%" align="left" style="font-family: 'Times New Roman', Times, serif;font-size: 16px;line-height: 26px;color: #767676;">Discounts</td>
+                    <td class="product-return-totals" width="50%" align="right" valign="top" style="font-family: 'Times New Roman', Times, serif;font-size: 16px;line-height: 26px;color: #767676;">${{ data.discounts }}</td>
+                  </tr>
+                {{/if}}
                 <tr>
                   <td class="product-return-totals" width="50%" align="left" style="font-family: 'Times New Roman', Times, serif;font-size: 16px;line-height: 26px;color: #767676;">Tax</td>
                   <td class="product-return-totals" width="50%" align="right" valign="top" style="font-family: 'Times New Roman', Times, serif;font-size: 16px;line-height: 26px;color: #767676;">${{ data.taxes }}</td>
