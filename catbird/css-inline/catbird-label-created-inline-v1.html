@@ -1,0 +1,449 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StoreTemplate</title>
+  <style type="text/css">
+
+    @import url(https://www.catbirdnyc.com/static/frontend/ImaginationMedia/catbird/en_US/fonts/trade-gothic/trade-gothic-regular.woff2);
+
+    table {
+      font-family: 'Trade Gothic', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-font-smoothing: antialiased;
+      font-smoothing: antialiased;
+    }
+
+    @media only screen and (max-width: 700px) {
+      /* ----- Base styles ----- */
+      .full-width-container {
+        padding: 0 !important;
+      }
+
+      .container {
+        width: 100% !important;
+      }
+
+      /* ----- Header ----- */
+      .header td {
+        padding: 30px 15px 30px 15px !important;
+      }
+
+      .projects-list tr {
+        display: block !important;
+      }
+
+      .projects-list td {
+        display: block !important;
+      }
+
+      .projects-list tbody {
+        display: block !important;
+      }
+
+      .projects-list img {
+        margin: 0 auto 25px auto;
+      }
+
+      /* ----- Half block ----- */
+      .half-block tr {
+        display: block !important;
+      }
+
+      .half-block td {
+        display: block !important;
+      }
+
+      /* ----- Hero subheader ----- */
+      .title {
+        padding: 20px 15px 15px 15px !important;
+        font-size: 22px !important;
+      }
+
+      .message {
+        padding: 0 70px 40px 70px !important;
+        font-size: 20px !important;
+      }
+
+      /* ----- Info bullets ----- */
+      .info-bullets tr {
+        display: block !important;
+      }
+
+      .info-bullets td {
+        display: block !important;
+      }
+
+      .info-bullets tbody {
+        display: block;
+      }
+    }
+  </style>
+
+
+  <!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+  </xml><![endif]-->
+</head>
+
+<body style="padding: 0; margin: 0;">
+
+<!-- / Full width container -->
+<table class="full-width-container" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" bgcolor="" style="width: 100%; height: 100%; padding: 30px 0 10px 0;">
+  <tr>
+    <td valign="top" align="center">
+
+      <table class="container" style="width:700px" width="700" cellspacing="0" cellpadding="0" border="0">
+        <tbody>
+        <tr>
+          <td valign="top" align="center">
+
+            <div style="background-color:{{ template_data.background_color }};padding-bottom:7%">
+              <table class="header" width="320" cellspacing="0" cellpadding="0" border="0" style="width: 620px;">
+                <tbody>
+                <tr>
+                  <td style="padding:30px 0 30px 0" align="center">
+                    <a href="{{ template_data.logo_link  }}" target="_blank">
+                      <img class="header__logo" alt="Logo image" src="{{ template_data.logo_src  }}" style="width: 235px;height: auto;">
+                    </a>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+
+              <!--content-->
+              <table class="container hero-subheader" border="0" cellpadding="0" cellspacing="0" width="620" style="width: 620px;">
+                <tr>
+                  <td class="title" align="center" style="padding: 25px 0 15px 0;font-size: 20px;text-align: center;color: #333333;font-weight: 500;">{{ data.title }}</td>
+                </tr>
+
+                <tr>
+                  <td class="message" align="center" style="padding: 10px 70px 20px;font-size: 20px;line-height: 30px;color: #333333;">
+                    {{{ data.body_message }}}
+                  </td>
+                </tr>
+
+              </table>
+              <!-- Table Product -->
+              <table class="container table_product" border="0" cellpadding="0" cellspacing="0" width="620" style="width: 620px;">
+                <tr class="" border="0" cellpadding="0" cellspacing="0" width="620" style="border-bottom: solid 1px #333333; width: 620px;">
+                  <td class="" width="50%" style="font-size: 14px; color: #333333; font-weight: bold; padding: 25px 0 0 0;" align="">RETURN SUMMARY FOR RETURN ID {{ data.return_data.return_id }}</td>
+                  <td class="" width="20%" style="font-size: 14px; color: #333333; font-weight: bold; padding: 25px 10px 0 0;" align="">PRICE</td>
+                  <td class="" width="20%" style="font-size: 14px; color: #333333; font-weight: bold; padding: 25px 10px 0 0;" align="">PRICE W. TAX</td>
+                  <td class="" width="20%" style="font-size: 14px; color: #333333; font-weight: bold; padding: 25px 0 0 0;" align="">QTY</td>
+                  <td class="" width="10%" style="font-size: 14px; color: #333333; font-weight: bold; padding: 25px 0 0 0;" align="">SUBTOTAL</td>
+                </tr>
+              </table>
+              <!-- / Divider -->
+              <table class="" border="0" cellpadding="0" cellspacing="0" width="620" align="center" style="border-bottom: solid 1px #333333; width: 620px;">
+                <tr>
+                  <td align="center">&nbsp;</td>
+                </tr>
+              </table>
+              <!-- Products -->
+              {{#each data.return_data.items}}
+              <table class="container table_product" border="0" cellpadding="0" cellspacing="0" width="620" style="width: 620px;">
+                <tr>
+                  <td class="" width="50%" style="font-size: 10px; color: #333333; font-weight: bold; padding: 25px 0 0 0;" align="">{{ description}}</td>
+                  <td class="" width="20%" style="font-size: 12px; color: #333333; font-weight: normal; padding: 25px 0 0 0;" align="">{{ price_with_tax }}</td>
+                  <td class="" width="20%" style="font-size: 12px; color: #333333; font-weight: normal; padding: 25px 10px 0 0;" align="">{{ tax_amount }}</td>
+                  <td class="" width="20%" style="font-size: 12px; color: #333333; font-weight: normal; padding: 25px 14px 0 0;" align="">{{ quantity }}</td>
+                  <td class="" width="20%" style="font-size: 12px; color: #333333; font-weight: normal; padding: 25px 10px 0 0;" align="">{{ subtotal }}</td>
+                </tr>
+                <tr>
+                  <td class="" style="font-size: 12px; color: #333333; font-weight: normal; padding: 10px 0 0 0;" align="">{{ item_identifier }}</td>
+                </tr>
+              </table>
+              {{/each}}
+              <table class="" border="0" cellpadding="0" cellspacing="0" width="620" align="center" style="border-bottom: solid 1px #D9D9D9; width: 620px;">
+                <tr>
+                  <td align="center">&nbsp;</td>
+                </tr>
+              </table>
+
+              <table class="container table_product" border="0" cellpadding="0" cellspacing="0" width="655" style="width: 655px;" align="">
+                <tr>
+                  <td style="width: 55%;" align="">&nbsp;</td>
+                  <td class="" style="font-size: 14px; color: #333333; font-weight: bold; padding: 25px 0 0 0;" align="right">RETURN FEE</td>
+                  <td class="" style="font-size: 14px; color: #333333; font-weight: normal; padding: 25px 36px 0 0;" align="right">{{ data.return_data.return_fee }}</td>
+                </tr>
+                <tr>
+                  <td style="width: 55%;" align="">&nbsp;</td>
+                  <td class="" style="font-size: 14px; color: #333333; font-weight: bold; padding: 25px 0 0 0;" align="right">ESTIMATED REFUND</td>
+                  <td class="" style="font-size: 14px; color: #333333; font-weight: normal; padding: 25px 36px 0 0;" align="right">{{ data.return_data.estimated_refund }}</td>
+                </tr>
+              </table>
+
+              <table style="padding: 40px 0 0 0;">
+                <tr>
+                  <td align="center">
+                    <table class="cta__block" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="cta__button__link" style="width: 230px;border-radius: 5px;background: #333333;padding: 15px;text-transform: uppercase;text-align: center;font-size: 14px;font-weight: bold;">
+                          <a href="{{ data.button_link}}" style="text-decoration: none;color: #ffffff;">
+                            {{ data.button_text }}
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <!--RETURN INSTRUCTIONS-->
+              <table class="container " border="0" cellpadding="0" cellspacing="0" width="690" style="width: 690px;">
+                <tr>
+                  <td class="" style="font-size: 14px; line-height: 30px; color: #333333; padding: 35px 34px 20px;" align="left">
+                    RETURN INSTRUCTIONS:
+                  </td>
+                </tr>
+              </table>
+
+              {{#if data.isInStore}}
+                <table class="container" width="690" cellspacing="0" cellpadding="0" border="0" align="" style="width: 100% !important;">
+                <tbody>
+                <tr>
+                  <td style="font-size:20px;line-height:30px;color:#333333;padding:0 34px 15px" align="">
+                    <ol>
+                      <li dir="ltr">
+                        <p dir="ltr"><span><strong>PRINT</strong>: Please print out the attached Return Authorization Slip.</span>
+                        </p>
+                      </li>
+                      <li dir="ltr">
+                        <p dir="ltr"><span><strong>PACK:</strong> Please use all original packaging if you have it. Make sure to include the Return Authorization Slip.</span>
+                        </p>
+                      </li>
+                      <li dir="ltr">
+                        <p dir="ltr">
+                          <span><strong>DROP OFF</strong>: You can also drop returns off in our Williamsburg or Soho locations. Please keep in mind there may be extra processing time as returns are processed at Catbird HQ. See store hours
+                            <a href="https://www.catbirdnyc.com/our-locations" target="_blank">
+                              here
+                            </a>.&nbsp;
+                          </span>
+                        </p>
+                      </li>
+                    </ol>
+                    <p><span style="color:#000000">&nbsp;</span></p>
+                    <p dir="ltr">
+                      <span style="color:#000000">
+                        All returned merchandise must be in its original condition. Sale items, special orders,
+                        custom jewelry, engraved items, fragrances, beauty products, and comestibles are final sale and cannot be returned.
+                      </span>
+                    </p>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+              {{else}}
+                <table class="container" width="690" cellspacing="0" cellpadding="0" border="0" align="" style="width: 100% !important;">
+                <tbody>
+                <tr>
+                  <td style="font-size:20px;line-height:30px;color:#333333;padding:0 34px 15px" align="">
+                    <ol>
+                      <li dir="ltr">
+                        <p dir="ltr"><span><strong>PRINT</strong>: Please print out the attached UPS label and the Return Authorization Slip.</span>
+                        </p>
+                      </li>
+                      <li dir="ltr">
+                        <p dir="ltr"><span><strong>PACK:</strong> Please use all original packaging if you have it. Make sure to include the Return Authorization Slip.</span>
+                        </p>
+                      </li>
+                      <li dir="ltr">
+                        <p dir="ltr"><span><strong>SHIP</strong>: Bring it to a local UPS location (link to UPS website) or you can call to schedule a pick up at 1-800-PICKUPS.&nbsp;</span>
+                        </p>
+                      </li>
+                      <li dir="ltr">
+                        <p dir="ltr">
+                          <span><strong>DROP OFF</strong>: You can also drop returns off in our Williamsburg or Soho locations. Please keep in mind there may be extra processing time as returns are processed at Catbird HQ. See store hours
+                            <a href="https://www.catbirdnyc.com/our-locations" target="_blank">
+                              here
+                            </a>.&nbsp;
+                          </span>
+                        </p>
+                      </li>
+                    </ol>
+                    <p><span style="color:#000000">&nbsp;</span></p>
+                    <p dir="ltr">
+                      <span style="color:#000000">
+                        All returned merchandise must be in its original condition. Sale items, special orders,
+                        custom jewelry, engraved items, fragrances, beauty products, and comestibles are final sale and cannot be returned.
+                      </span>
+                    </p>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+              {{/if}}
+
+              <!--END RETURN INSTRUCTIONS-->
+              {{#if data.return_data.contact_page}}
+              <table class="container table_product" border="0" cellpadding="0" cellspacing="0" width="620" style="width: 620px; padding: 0 0 50px 0;" align="center">
+                <tr>
+                  <td class="" style="font-size: 20px; color: #333333; font-weight: bold; padding: 25px 0 10px 0;" align="center">Questions?</td>
+                </tr>
+                <tr>
+                  <td class="" style="font-size: 20px; color: #333333; font-weight: bold;" align="center">
+                    <a href="{{ data.return_data.contact_page }}" target="_blank" style="color: inherit; text-decoration: none">
+                      {{ data.return_data.contact_page }}
+                    </a>
+                  </td>
+                </tr>
+              </table>
+              {{/if}}
+
+            </div>
+            <table class="footer">
+              <tr>
+                <td valign="top" align="center">
+                  <table>
+                    <tr>
+                      <td class="footer__links" style="width: 100%;">
+                        {{#each template_data.menu_links}}
+                        <table class="container line" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100% !important;">
+                          <tbody>
+                          <tr>
+                            <td align="center">
+                              <table class="footer__links__line" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 700px;border-bottom: solid 3px #333333;">
+                                <tbody>
+                                <tr>
+                                  <td align="center">&nbsp;</td>
+                                </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                          </tbody>
+                        </table>
+                        <table class="container table_product" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100% !important;">
+                          <tbody>
+                          <tr>
+                            <td class="footer__links__title" style="text-align: center;font-size: 25px;color: #333333;font-weight: bold;padding: 20px 0 0 0;">
+                              <a href="{{ link }}" style="text-decoration: none;text-transform: uppercase;color: #333333;" target="_blank">{{ title }}</a>
+                            </td>
+                          </tr>
+                          </tbody>
+                        </table>
+                        {{/each}}
+                        <table class="container line" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100% !important;">
+                          <tbody>
+                          <tr>
+                            <td align="center">
+                              <table class="footer__links__line" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 700px;border-bottom: solid 3px #333333;">
+                                <tbody>
+                                <tr>
+                                  <td align="center">&nbsp;</td>
+                                </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <table class="container footer__banner" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="display: none;margin-top: 50px;width: 100% !important;">
+                    <tbody>
+                    <tr>
+                      <td align="center">
+                        <table class="container" style="width:620px" width="620" cellspacing="0" cellpadding="0" border="0" align="center">
+                          <tbody>
+                          <tr>
+                            <td align="center">
+                              <table style="width:60px;height:2px" width="60" height="2" cellspacing="0" cellpadding="0" border="0">
+                                <tbody>
+                                <tr>
+                                  <td align="center">
+                                    <a href="{{ template_data.banner_link }}" target="_blank"><img alt="Banner promotional" src="{{ template_data.banner_src }}" class="CToWUd" width="700" height="255"></a>
+                                  </td>
+                                </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
+
+                  <table class="container footer__icons" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100% !important;">
+                    <tbody>
+                    <tr>
+                      <td align="center">
+                        <table class="container" style="width:620px" width="620" cellspacing="0" cellpadding="0" border="0" align="center">
+                          <tbody>
+                          {{#if template_data.show_social_links}}
+                          <tr>
+                            <td align="center">
+
+                              <table style="width:60px;height:2px" width="60" height="2" cellspacing="0" cellpadding="0" border="0">
+                                <tbody>
+                                <tr>
+                                  {{#if template_data.instagram_link}}
+                                  <td style="padding:50px 15px 10px;width:60px;height:2px;font-size:1px" width="60" height="2" align="center">
+                                    <a href="{{ template_data.instagram_link }}" target="_blank"><img alt="Instagram" src="https://relay-cloud-production.s3.amazonaws.com/static/instagram_icon.png" class="CToWUd" width="30"></a>
+                                  </td>
+                                  {{/if}}
+                                  {{#if template_data.facebook_link}}
+                                  <td style="padding:50px 15px 10px;width:60px;height:2px;font-size:1px" width="60" height="2" align="center">
+                                    <a href="{{ template_data.facebook_link }}" target="_blank"><img alt="Facebook" src="https://relay-cloud-production.s3.amazonaws.com/static/facebook_icon.png" class="CToWUd" width="30"></a>
+                                  </td>
+                                  {{/if}}
+                                  {{#if template_data.pinterest_link }}
+                                  <td style="padding:50px 15px 10px;width:60px;height:2px;font-size:1px" width="60" height="2" align="center">
+                                    <a href="{{ template_data.pinterest_link }}" target="_blank"><img alt="Pinterest" src="https://relay-cloud-production.s3.amazonaws.com/static/pinterest_icon.png" class="CToWUd" width="30"></a>
+                                  </td>
+                                  {{/if}}
+                                  {{#if template_data.twitter_link }}
+                                  <td style="padding:50px 15px 10px;width:60px;height:2px;font-size:1px" width="60" height="2" align="center">
+                                    <a href="{{ template_data.twitter_link }}" target="_blank"><img alt="Twitter" src="https://relay-cloud-production.s3.amazonaws.com/static/twitter_icon.png" class="CToWUd" width="30"></a>
+                                  </td>
+                                  {{/if}}
+                                </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                          {{/if}}
+                          <tr>
+                            <td style="color:#333333;text-align:center;font-size:12px;padding:40px 0 20px 0;line-height:22px">
+                              @ {{ template_data.store_name }} 2020, All rights reserved.
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="color:#333333;text-align:center;font-size:12px;padding:5px 0 0 0;line-height:22px">
+                              {{ template_data.street }} | {{ template_data.city }} ,
+                              {{ template_data.state_code }} {{ template_data.postal_code }} - {{ template_data.country_code }}
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="color:#333333;text-align:center;font-size:12px;padding:5px 0 0 0;line-height:22px">
+                              <a href="mailto:{{ template_data.store_email }}" target="_blank">{{ template_data.store_email }}</a> | <a href="{{ template_data.logo_link }}" target="_blank">{{ template_data.logo_link }}</a>
+                            </td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
