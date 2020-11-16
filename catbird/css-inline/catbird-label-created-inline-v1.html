@@ -204,7 +204,7 @@
                 </tr>
               </table>
 
-              {{#if data.isInStore}}
+              {{#if data.is_in_store_method}}
                 <table class="container" width="690" cellspacing="0" cellpadding="0" border="0" align="" style="width: 100% !important;">
                 <tbody>
                 <tr>
@@ -239,7 +239,8 @@
                 </tr>
                 </tbody>
               </table>
-              {{else}}
+              {{/if}}
+              {{#unless data.is_in_store_method}}
                 <table class="container" width="690" cellspacing="0" cellpadding="0" border="0" align="" style="width: 100% !important;">
                 <tbody>
                 <tr>
@@ -278,7 +279,7 @@
                 </tr>
                 </tbody>
               </table>
-              {{/if}}
+              {{/unless}}
 
               <!--END RETURN INSTRUCTIONS-->
               {{#if data.return_data.contact_page}}
