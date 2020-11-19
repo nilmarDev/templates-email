@@ -125,7 +125,7 @@
 
                 <tr>
                   <td class="message" align="center" style="padding: 10px 70px 20px;font-size: 20px;line-height: 30px;color: #333333;">
-                    {{{ data.body_message }}}
+                    Thank you for submitting your return information for order {{ data.order_reference }}
                   </td>
                 </tr>
 
@@ -205,34 +205,27 @@
               </table>
 
               {{#if data.is_in_store_method}}
-                <table class="container" width="690" cellspacing="0" cellpadding="0" border="0" align="" style="width: 100% !important;">
+              <table class="container" width="690" cellspacing="0" cellpadding="0" border="0" align="" style="width: 100% !important;">
                 <tbody>
                 <tr>
-                  <td style="font-size:20px;line-height:30px;color:#333333;padding:0 34px 15px" align="">
-                    <ol>
-                      <li dir="ltr">
-                        <p dir="ltr"><span><strong>PRINT</strong>: Please print out the attached Return Authorization Slip.</span>
-                        </p>
-                      </li>
-                      <li dir="ltr">
-                        <p dir="ltr"><span><strong>PACK:</strong> Please use all original packaging if you have it. Make sure to include the Return Authorization Slip.</span>
-                        </p>
-                      </li>
-                      <li dir="ltr">
-                        <p dir="ltr">
-                          <span><strong>DROP OFF</strong>: You can also drop returns off in our Williamsburg or Soho locations. Please keep in mind there may be extra processing time as returns are processed at Catbird HQ. See store hours
-                            <a href="https://www.catbirdnyc.com/our-locations" target="_blank">
+                  <td style="font-size:18px;line-height:30px;color:#333333;">
+                    <ul>
+                      <li style="list-style: none" dir="ltr">
+                        <p dir="ltr"><span>Please print out the attached Return Authorization and bring it to the store along with the merchandise you’d like to return. See store hours
+                          <a href="https://www.catbirdnyc.com/our-locations" target="_blank">
                               here
-                            </a>.&nbsp;
-                          </span>
+                            </a>.&nbsp;</span>
                         </p>
                       </li>
-                    </ol>
-                    <p><span style="color:#000000">&nbsp;</span></p>
+                      <li style="list-style: none" dir="ltr">
+                        <p dir="ltr"><span>There may be extra processing time as returns are processed at Catbird HQ.</span>
+                        </p>
+                      </li>
+                    </ul>
                     <p dir="ltr">
                       <span style="color:#000000">
-                        All returned merchandise must be in its original condition. Sale items, special orders,
-                        custom jewelry, engraved items, fragrances, beauty products, and comestibles are final sale and cannot be returned.
+                        All returned merchandise must be in its original condition. Sale items, special orders, custom jewelry,
+                        engraved items, fragrances, beauty products, and comestibles are final sale and cannot be returned.
                       </span>
                     </p>
                   </td>
@@ -241,38 +234,28 @@
               </table>
               {{/if}}
               {{#unless data.is_in_store_method}}
-                <table class="container" width="690" cellspacing="0" cellpadding="0" border="0" align="" style="width: 100% !important;">
+              <table class="container" width="690" cellspacing="0" cellpadding="0" border="0" align="" style="width: 100% !important;">
                 <tbody>
                 <tr>
-                  <td style="font-size:20px;line-height:30px;color:#333333;padding:0 34px 15px" align="">
+                  <td style="font-size:18px;line-height:30px;color:#333333;">
                     <ol>
                       <li dir="ltr">
                         <p dir="ltr"><span><strong>PRINT</strong>: Please print out the attached UPS label and the Return Authorization Slip.</span>
                         </p>
                       </li>
                       <li dir="ltr">
-                        <p dir="ltr"><span><strong>PACK:</strong> Please use all original packaging if you have it. Make sure to include the Return Authorization Slip.</span>
+                        <p dir="ltr"><span><strong>PACK:</strong>: Please use all original packaging if you have it. Make sure to include the Return Authorization Slip.</span>
                         </p>
                       </li>
                       <li dir="ltr">
-                        <p dir="ltr"><span><strong>SHIP</strong>: Bring it to a local UPS location (link to UPS website) or you can call to schedule a pick up at 1-800-PICKUPS.&nbsp;</span>
-                        </p>
-                      </li>
-                      <li dir="ltr">
-                        <p dir="ltr">
-                          <span><strong>DROP OFF</strong>: You can also drop returns off in our Williamsburg or Soho locations. Please keep in mind there may be extra processing time as returns are processed at Catbird HQ. See store hours
-                            <a href="https://www.catbirdnyc.com/our-locations" target="_blank">
-                              here
-                            </a>.&nbsp;
-                          </span>
+                        <p dir="ltr"><span><strong>SHIP</strong>: Bring it to a local <a href="https://www.catbirdnyc.com/our-locations" target="_blank">UPS location</a> or you can call to schedule a pick up at 1-800-PICKUPS.</span>
                         </p>
                       </li>
                     </ol>
-                    <p><span style="color:#000000">&nbsp;</span></p>
                     <p dir="ltr">
                       <span style="color:#000000">
-                        All returned merchandise must be in its original condition. Sale items, special orders,
-                        custom jewelry, engraved items, fragrances, beauty products, and comestibles are final sale and cannot be returned.
+                        All returned merchandise must be in its original condition. Sale items, special orders, custom jewelry,
+                        engraved items, fragrances, beauty products, and comestibles are final sale and cannot be returned.
                       </span>
                     </p>
                   </td>
